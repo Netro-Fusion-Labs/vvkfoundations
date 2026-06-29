@@ -1,0 +1,137 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "Who We Are",
+    "founder": "Founder",
+    "initiatives": "Our Impact",
+    "gallery": "Gallery",
+    "reports": "Reports",
+    "contact": "Contact",
+    "donate": "Donate Now"
+  },
+  "hero": {
+    "subtitle": "Transforming Lives. Empowering Communities.",
+    "title": "Empower. Enable. Employ.",
+    "description": "VVK Foundation is a catalyst for change, driving grassroots transformation in Karnataka through targeted initiatives for Farmers, Women, and Youth.",
+    "cta_primary": "See Our Impact",
+    "cta_secondary": "Join the Movement"
+  },
+  "stats": {
+    "youth": "Youth Empowered",
+    "women": "Women Honored",
+    "health": "Health Check-ups"
+  },
+  "about": {
+    "title": "Who We Are",
+    "mission_title": "Our Mission",
+    "mission_desc": "To empower the marginalized sections of society—specifically farmers, women, and youth—by equipping them with the resources, education, and healthcare needed to lead dignified, independent lives.",
+    "vision_title": "Our Vision",
+    "vision_desc": "We envision a self-reliant and equitable society where every individual, regardless of their background, has access to opportunities that foster growth, prosperity, and holistic well-being.",
+    "objectives_title": "Core Interventions",
+    "obj_1": "Quality Education: Bridging the gap for rural youth through intensive coaching and mentorship.",
+    "obj_2": "Women's Empowerment: Fostering economic independence and cultural reverence (Nari Shakti).",
+    "obj_3": "Rural Healthcare: Bringing specialized medical camps to underserved communities.",
+    "obj_4": "Agricultural Support: Promoting sustainable farming and farmer welfare."
+  },
+  "founder": {
+    "title": "Our Founder",
+    "name": "Mrs. Veena Vijayanand Kashappanavar",
+    "role": "Founder & Chairperson",
+    "bio": "A visionary leader dedicated to social upliftment, Mrs. Veena Kashappanavar has spent years working at the grassroots level. She established the VVK Foundation to institutionalize her efforts in empowering the youth, women, and farmers of the region. Her leadership is marked by compassion, strategic action, and a deep commitment to cultural traditions.",
+    "message_title": "A Message from the Founder",
+    "message": "\"True empowerment begins when we enable others to discover their own strength. At VVK Foundation, our goal is not just to provide aid, but to create sustainable pathways for our youth, our women, and our farmers to thrive independently.\"",
+    "highlights_title": "Leadership in action",
+    "highlight_1": "Leading women-centered public events that celebrate dignity, culture, and community participation.",
+    "highlight_2": "Supporting students through free coaching access and motivational outreach.",
+    "highlight_3": "Anchoring health and welfare drives in partnership with trusted institutions."
+  },
+  "initiatives": {
+    "title": "Our Impact & Initiatives",
+    "youth_title": "Youth Education & Coaching",
+    "youth_desc": "Our free coaching academies for competitive exams (KAS & PSI) have opened doors for hundreds of rural students in the Bagalkot district, ensuring merit-based opportunities for all.",
+    "women_title": "Women Empowerment (Nari Shakti)",
+    "women_desc": "Through massive 'Nari Shakti' conferences and cultural programs like the Banashankari Jatra, we honor and uplift thousands of women, recognizing their pivotal role in nation-building.",
+    "health_title": "Community Healthcare",
+    "health_desc": "In collaboration with top institutions like SDM Narayana Hrudayalaya, we organize mega cardiac and general health check-up camps, bringing life-saving care to remote areas."
+  },
+  "activities": {
+    "title": "Action on the Ground",
+    "act_1_title": "Launch of Free KAS & PSI Coaching Academy",
+    "act_1_date": "December 2023",
+    "act_1_desc": "Inaugurated to serve 200 deserving students with entrance exams in Navanagar. Supported by dignitaries and designed to create the next generation of civil servants.",
+    "act_2_title": "Banashankari Jatra & Udi-Tumbuva",
+    "act_2_date": "January 24, 2024",
+    "act_2_desc": "Over 2,000 mothers and women were honored with the traditional offering (Udi) for Lok Kalyana during a grand cultural gathering.",
+    "act_3_title": "International Women's Day Conference",
+    "act_3_date": "March 9, 2024",
+    "act_3_desc": "Held at Ilkal and Banahatti under the theme 'Nari Shakti Deshada Shakti', honoring women achievers for their resilience and success.",
+    "act_4_title": "Mega Cardiac Health Check-up Camp",
+    "act_4_date": "August 21, 2024",
+    "act_4_desc": "Marking the founder's birthday, this life-saving camp was executed with SDM Narayana Hrudayalaya in the presence of revered spiritual leaders."
+  },
+  "gallery": {
+    "title": "Gallery",
+    "desc": "A visual record of the foundation's community work, celebrations, and public service initiatives.",
+    "section_title": "Moments from the annual report",
+    "section_desc": "These photographs are curated from the foundation reports and highlight student outreach, women-led gatherings, health initiatives, and founder-led field engagement.",
+    "img_1": "Free Coaching Academy Launch",
+    "img_2": "Banashankari Jatra Celebration",
+    "img_3": "Nari Shakti Women's Conference",
+    "img_4": "Community Welfare Distribution",
+    "img_5": "Founder Mrs. Veena with Beneficiaries",
+    "img_6": "Mega Health Check-up Camp",
+    "img_7": "Honoring Student Achievers",
+    "img_8": "Large Scale Public Gathering"
+  },
+  "reports": {
+    "title": "Transparency & Reports",
+    "desc": "Transparency is core to our mission. Review our detailed annual activity reports.",
+    "summary_title": "Highlights from the report",
+    "point_1_title": "Education outreach",
+    "point_1_desc": "The report documents free coaching support for KAS and PSI aspirants, with a focus on rural youth who need merit-based opportunities.",
+    "point_2_title": "Women-centered programs",
+    "point_2_desc": "It captures large-scale women's gatherings, cultural celebrations, and recognition events that reinforce dignity and social participation.",
+    "point_3_title": "Healthcare and service",
+    "point_3_desc": "The foundation report also showcases medical camps and collaborative welfare drives delivered with institutional partners.",
+    "card_en_desc": "Read the complete English annual report with activity details, photographs, and program summaries.",
+    "card_kn_desc": "Access the Kannada version of the report for local-language storytelling and community documentation.",
+    "gallery_cta_title": "Browse the photo gallery",
+    "gallery_cta_desc": "We have also prepared a visual gallery from the report photographs so visitors can quickly explore the foundation's work.",
+    "gallery_cta_button": "Open Gallery",
+    "download_en": "Download Report (English)",
+    "download_kn": "Download Report (Kannada)"
+  },
+  "contact": {
+    "title": "Get Involved",
+    "address_label": "Head Office",
+    "address": "Bagalkot District, Karnataka, India",
+    "email_label": "Email",
+    "email": "info@vvkfoundation.org",
+    "phone_label": "Phone",
+    "phone": "+91 XXXXX XXXXX",
+    "form_name": "Full Name",
+    "form_email": "Email Address",
+    "form_message": "How would you like to help?",
+    "form_submit": "Send Message"
+  },
+  "footer": {
+    "tag": "Grassroots impact across Karnataka",
+    "description": "VVK Foundation: Empowering communities, enabling dreams, and employing potential across Karnataka.",
+    "quick_links": "Navigate",
+    "legal": "Legal",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Use",
+    "address_label": "Bagalkot, Karnataka",
+    "phone": "+91 XXXXX XXXXX",
+    "focus_title": "Focus Areas",
+    "focus_1": "Youth coaching and mentorship",
+    "focus_2": "Women-led cultural empowerment",
+    "focus_3": "Health and welfare camps",
+    "copyright": "© 2024 VVK Foundation. All rights reserved."
+  },
+  "404": {
+    "title": "404 - Page Not Found",
+    "desc": "The page you are looking for does not exist.",
+    "home_btn": "Back to Home"
+  }
+}

@@ -1,0 +1,42 @@
+:root {
+    /* Colors derived from Logo (Green & Blue tones) */
+    --clr-primary-green: #21a340; /* More vibrant NGO green */
+    --clr-primary-blue: #023e8a;
+    --clr-accent-gold: #f47f20; /* Vibrant Orange for CTA like Smile Foundation */
+    --clr-text-main: #2b2b2b;
+    --clr-text-muted: #86868b;
+    --clr-bg-main: #fbfbfd;
+    --clr-bg-card: #ffffff;
+    --clr-bg-footer: #151516;
+    --clr-border: rgba(0,0,0,0.1);
+    
+    /* Glassmorphism */
+    --glass-bg: rgba(255, 255, 255, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.3);
+    
+    /* Typography */
+    --font-heading: 'Poppins', sans-serif;
+    --font-body: 'Inter', sans-serif;
+    
+    /* Spacing */
+    --space-xs: 0.5rem;
+    --space-sm: 1rem;
+    --space-md: 2rem;
+    --space-lg: 4rem;
+    --space-xl: 8rem;
+    
+    /* Border Radius */
+    --radius-sm: 8px;
+    --radius-md: 16px;
+    --radius-lg: 24px;
+    
+    /* Transitions */
+    --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-medium: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow: 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    
+    /* Shadows */
+    --shadow-sm: 0 4px 6px rgba(0,0,0,0.05);
+    --shadow-md: 0 10px 30px rgba(0,0,0,0.08);
+    --shadow-lg: 0 20px 40px rgba(0,0,0,0.12);
+}
