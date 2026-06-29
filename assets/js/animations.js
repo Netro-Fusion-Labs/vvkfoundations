@@ -2,6 +2,7 @@ export function initAnimations() {
     setupIntersectionObserver();
     setupMagneticButtons();
     setupNavbarScroll();
+    setupCounters();
 }
 
 export function reinitAnimations() {
@@ -9,6 +10,7 @@ export function reinitAnimations() {
     setTimeout(() => {
         setupIntersectionObserver();
         setupMagneticButtons();
+        setupCounters();
     }, 100);
 }
 
@@ -64,4 +66,42 @@ function setupNavbarScroll() {
             navbar.style.boxShadow = 'none';
         }
     });
+}
+
+function setupCounters() {
+    const counters = document.querySelectorAll('.counter');
+    const speed = 200; // lower is faster
+
+    if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const counter = entry.target;
+                    const updateCount = () => {
+                        const target = +counter.getAttribute('data-target');
+                        const count = +counter.innerText;
+                        const inc = target / speed;
+
+                        if (count < target) {
+                            counter.innerText = Math.ceil(count + inc);
+                            setTimeout(updateCount, 15);
+                        } else {
+                            counter.innerText = target;
+                        }
+                    };
+                    updateCount();
+                    observer.unobserve(counter);
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        counters.forEach(counter => {
+            counter.innerText = '0';
+            observer.observe(counter);
+        });
+    } else {
+        counters.forEach(counter => {
+            counter.innerText = counter.getAttribute('data-target');
+        });
+    }
 }

@@ -19,7 +19,21 @@
   "stats": {
     "youth": "Youth Empowered",
     "women": "Women Honored",
-    "health": "Health Check-ups"
+    "farmers": "Farmers Trained",
+    "villages": "Villages Reached"
+  },
+  "home": {
+    "founder_title": "From the Founder's Desk",
+    "founder_desc": "\"True empowerment begins when we enable others to discover their own strength. At VVK Foundation, our goal is to create sustainable pathways for our youth, women, and farmers to thrive independently.\"",
+    "founder_btn": "Read More",
+    "reach_title": "Our Geographical Reach",
+    "reach_desc": "Creating deep-rooted impact across key regions in Karnataka, focusing on rural and semi-urban communities.",
+    "reach_1_title": "Bagalkot",
+    "reach_1_desc": "District Headquarters & Core Operations",
+    "reach_2_title": "Ilkal",
+    "reach_2_desc": "Women Empowerment Conferences",
+    "reach_3_title": "Banahatti",
+    "reach_3_desc": "Cultural & Healthcare Initiatives"
   },
   "about": {
     "title": "Who We Are",
@@ -74,6 +88,11 @@
     "desc": "A visual record of the foundation's community work, celebrations, and public service initiatives.",
     "section_title": "Moments from the annual report",
     "section_desc": "These photographs are curated from the foundation reports and highlight student outreach, women-led gatherings, health initiatives, and founder-led field engagement.",
+    "cat_women": "International Women's Day (Nari Shakti)",
+    "cat_cultural": "Banashankari Jatra Celebration",
+    "cat_health": "Mega Cardiac & Health Camps",
+    "cat_youth": "Free KAS & PSI Coaching Launch",
+    "cat_workshop": "Community Workshops & Training",
     "img_1": "Free Coaching Academy Launch",
     "img_2": "Banashankari Jatra Celebration",
     "img_3": "Nari Shakti Women's Conference",
