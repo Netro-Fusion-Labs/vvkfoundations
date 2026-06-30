@@ -5,7 +5,7 @@
  */
 
 import { initI18n, getCurrentLang, setLanguage } from './i18n.js';
-import { initRouter } from './router.js';
+import { initRouter } from './router.js?v=1.1';
 import { initAnimations } from './animations.js';
 import { initLightbox } from './lightbox.js';
 import { initMobileMenu } from './mobile-menu.js';

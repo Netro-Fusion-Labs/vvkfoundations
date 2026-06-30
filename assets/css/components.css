@@ -407,39 +407,40 @@
     transition: border-color var(--transition-fast);
 }
 
-.accordion-item.active {
-    border-color: var(--clr-green-200);
+.accordion-item.is-open {
+    border-color: var(--clr-primary);
+    background: #ffffff;
 }
 
 .accordion-trigger {
     width: 100%;
+    padding: var(--space-lg);
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    padding: var(--space-lg) var(--space-xl);
-    font-size: var(--fs-body);
-    font-weight: 600;
-    color: var(--clr-text-primary);
-    text-align: left;
+    align-items: center;
+    background: transparent;
+    border: none;
     cursor: pointer;
-    background: var(--clr-surface);
-    transition: background var(--transition-fast);
+    text-align: left;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--clr-text-primary);
+    transition: all var(--transition-fast);
 }
 
 .accordion-trigger:hover {
-    background: var(--clr-bg-secondary);
+    color: var(--clr-primary);
 }
 
 .accordion-trigger .accordion-icon {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
+    color: var(--clr-primary);
     transition: transform var(--transition-normal);
-    color: var(--clr-text-muted);
-    flex-shrink: 0;
 }
 
-.accordion-item.active .accordion-icon {
+/* Icon rotation when open */
+.accordion-item.is-open .accordion-icon {
     transform: rotate(180deg);
-    color: var(--clr-primary);
 }
 
 .accordion-content {

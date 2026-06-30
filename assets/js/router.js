@@ -13,7 +13,7 @@ import { renderContact, initContactForm } from './pages/contact.js';
 import { renderReports } from './pages/reports.js';
 import { renderNews } from './pages/news.js';
 import { renderVolunteer, initVolunteerForm } from './pages/volunteer.js';
-import { renderFaq, initFaqAccordion } from './pages/faq.js';
+import { renderFaq, initFaqAccordion } from './pages/faq.js?v=1.1';
 import { renderPrivacy } from './pages/privacy.js';
 import { renderTerms } from './pages/terms.js';
 import { renderNotFound } from './pages/notfound.js';

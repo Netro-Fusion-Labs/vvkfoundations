@@ -36,7 +36,7 @@ export function renderFaq() {
 
 function faqItem(questionKey, answerKey, isOpen = false) {
     return `
-        <div class="accordion-item ${isOpen ? 'active' : ''} reveal reveal--up">
+        <div class="accordion-item ${isOpen ? 'is-open' : ''} reveal reveal--up">
             <button class="accordion-trigger" aria-expanded="${isOpen}" type="button">
                 <span data-i18n="${questionKey}">Loading...</span>
                 <i class="fas fa-chevron-down accordion-icon"></i>
@@ -63,18 +63,18 @@ export function initFaqAccordion() {
 
         const item = trigger.closest('.accordion-item');
         const content = item.querySelector('.accordion-content');
-        const isActive = item.classList.contains('active');
+        const isActive = item.classList.contains('is-open');
 
         // Close all items
         accordion.querySelectorAll('.accordion-item').forEach(i => {
-            i.classList.remove('active');
+            i.classList.remove('is-open');
             i.querySelector('.accordion-trigger').setAttribute('aria-expanded', 'false');
             i.querySelector('.accordion-content').style.maxHeight = '0';
         });
 
         // Open clicked item (if it was closed)
         if (!isActive) {
-            item.classList.add('active');
+            item.classList.add('is-open');
             trigger.setAttribute('aria-expanded', 'true');
             content.style.maxHeight = content.scrollHeight + 'px';
         }
