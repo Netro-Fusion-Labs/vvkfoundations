@@ -9,8 +9,9 @@
     <title>VVK Foundation — Empower. Enable. Employ.</title>
     <meta name="description" content="VVK Foundation is dedicated to empowering marginalized sections of society, focusing on farmers, women, and youth in Karnataka.">
     
-    <!-- PWA Manifest -->
+    <!-- PWA Manifest & Favicon -->
     <link rel="manifest" href="/manifest.json">
+    <link rel="icon" type="image/png" href="/assets/images/Logo_tab_icon.png">
     
     <!-- Preconnect to external domains -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,13 +25,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <!-- CSS Design System -->
-    <link rel="stylesheet" href="/assets/css/variables.css">
-    <link rel="stylesheet" href="/assets/css/reset.css">
-    <link rel="stylesheet" href="/assets/css/utilities.css">
-    <link rel="stylesheet" href="/assets/css/global.css">
-    <link rel="stylesheet" href="/assets/css/components.css">
-    <link rel="stylesheet" href="/assets/css/animations.css">
-    <link rel="stylesheet" href="/assets/css/pages.css">
+    <link rel="stylesheet" href="/assets/css/variables.css?v=1.1">
+    <link rel="stylesheet" href="/assets/css/reset.css?v=1.1">
+    <link rel="stylesheet" href="/assets/css/utilities.css?v=1.1">
+    <link rel="stylesheet" href="/assets/css/global.css?v=1.1">
+    <link rel="stylesheet" href="/assets/css/components.css?v=1.1">
+    <link rel="stylesheet" href="/assets/css/animations.css?v=1.1">
+    <link rel="stylesheet" href="/assets/css/pages.css?v=1.1">
 
     <!-- Preloader Styles (inline for speed) -->
     <style>
@@ -86,6 +87,7 @@
             <nav class="nav-links" aria-label="Main navigation">
                 <a href="/" data-route data-i18n="nav.home">Home</a>
                 <a href="/about" data-route data-i18n="nav.about">About</a>
+                <a href="/founder" data-route data-i18n="nav.founder">Founder</a>
                 <a href="/initiatives" data-route data-i18n="nav.initiatives">Impact</a>
                 <a href="/gallery" data-route data-i18n="nav.gallery">Gallery</a>
                 <a href="/reports" data-route data-i18n="nav.reports">Reports</a>
@@ -161,6 +163,8 @@
                         <a href="https://www.facebook.com/VVKFoundation.in/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                         <a href="https://www.instagram.com/vvkFoundation.in" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                         <a href="https://www.youtube.com/@VVKFoundation_in" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.linkedin.com/company/vvkfoundationdotin/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://whatsapp.com/channel/0029Vb7yFxOA2pLFnKvmLz0L" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
             </div>
@@ -183,6 +187,11 @@
     <button id="back-to-top" class="back-to-top" aria-label="Back to top">
         <i class="fas fa-chevron-up"></i>
     </button>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://whatsapp.com/channel/0029Vb7yFxOA2pLFnKvmLz0L" target="_blank" rel="noopener noreferrer" class="floating-whatsapp" aria-label="Join our WhatsApp Channel">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
 
     <!-- Core App Logic (Type Module enables modern ES6 imports) -->

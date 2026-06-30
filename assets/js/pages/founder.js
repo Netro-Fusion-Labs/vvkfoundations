@@ -20,6 +20,17 @@ export function renderFounder() {
                     <div class="reveal reveal--right">
                         <h2 class="founder-name" data-i18n="founder.name">Mrs. Veena Vijayanand Kashappanavar</h2>
                         <p class="founder-role" data-i18n="founder.role">Founder & Chairperson</p>
+                        
+                        <div class="founder-social" style="align-items: center;">
+                            <span style="font-weight: 600; font-size: var(--fs-body-sm); color: var(--clr-text-secondary); text-transform: uppercase; letter-spacing: var(--ls-wide); margin-right: 4px;">Follow:</span>
+                            <a href="https://www.instagram.com/veena_vijayanand_kashappanavar?igsh=MXR0YmJ6OHJ2MWF1Yg==" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="social-ig">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://www.facebook.com/veena.vijayanandkashappanavar" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="social-fb">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </div>
+
                         <p class="founder-bio" data-i18n="founder.bio">A visionary leader dedicated to social upliftment, Mrs. Veena Kashappanavar has spent years working at the grassroots level. She established the VVK Foundation to institutionalize her efforts in empowering the youth, women, and farmers of the region. Her leadership is marked by compassion, strategic action, and a deep commitment to cultural traditions.</p>
 
                         <div class="founder-highlights">

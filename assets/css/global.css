@@ -578,6 +578,42 @@ section {
     box-shadow: var(--shadow-glow-green);
 }
 
+/* ── Floating WhatsApp ───────────────────────────────────── */
+.floating-whatsapp {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    width: 48px;
+    height: 48px;
+    background: #25D366; /* Official WhatsApp green */
+    color: #ffffff;
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    z-index: var(--z-sticky);
+    transition: all var(--transition-normal);
+    box-shadow: var(--shadow-md);
+    text-decoration: none;
+}
+
+.floating-whatsapp:hover {
+    transform: scale(1.1) translateY(-3px);
+    box-shadow: 0 10px 20px rgba(37, 211, 102, 0.4);
+    color: #ffffff;
+}
+
+@media (max-width: 640px) {
+    .floating-whatsapp {
+        bottom: 20px;
+        left: 20px;
+        width: 44px;
+        height: 44px;
+        font-size: 1.4rem;
+    }
+}
+
 /* ── Breadcrumbs ─────────────────────────────────────────── */
 .breadcrumbs {
     display: flex;

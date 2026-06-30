@@ -105,7 +105,9 @@ function updateStructuredData(path, title, description, url) {
         'sameAs': [
             'https://www.instagram.com/vvkFoundation.in',
             'https://www.facebook.com/VVKFoundation.in/',
-            'https://www.youtube.com/@VVKFoundation_in'
+            'https://www.youtube.com/@VVKFoundation_in',
+            'https://www.linkedin.com/company/vvkfoundationdotin/',
+            'https://whatsapp.com/channel/0029Vb7yFxOA2pLFnKvmLz0L'
         ]
     });
 
@@ -133,7 +135,11 @@ function updateStructuredData(path, title, description, url) {
             'name': 'Mrs. Veena Vijayanand Kashappanavar',
             'jobTitle': 'Founder & Chairperson',
             'worksFor': { '@type': 'NGO', 'name': SITE_NAME },
-            'url': `${BASE_URL}/founder`
+            'url': `${BASE_URL}/founder`,
+            'sameAs': [
+                'https://www.instagram.com/veena_vijayanand_kashappanavar?igsh=MXR0YmJ6OHJ2MWF1Yg==',
+                'https://www.facebook.com/veena.vijayanandkashappanavar'
+            ]
         });
     }
 
