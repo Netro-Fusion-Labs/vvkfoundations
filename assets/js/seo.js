@@ -102,7 +102,11 @@ function updateStructuredData(path, title, description, url) {
             '@type': 'State',
             'name': 'Karnataka'
         },
-        'sameAs': []
+        'sameAs': [
+            'https://www.instagram.com/vvkFoundation.in',
+            'https://www.facebook.com/VVKFoundation.in/',
+            'https://www.youtube.com/@VVKFoundation_in'
+        ]
     });
 
     // WebSite with SearchAction
