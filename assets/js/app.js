@@ -1,30 +1,59 @@
+/**
+ * VVK Foundation — Main Application Entry
+ * Bootstraps the application, handles preloader,
+ * initializes i18n, router, and core UI modules.
+ */
+
+import { initI18n, getCurrentLang, setLanguage } from './i18n.js';
 import { initRouter } from './router.js';
-import { initI18n, setLanguage } from './i18n.js';
 import { initAnimations } from './animations.js';
-import { renderPage } from './pages.js';
+import { initLightbox } from './lightbox.js';
+import { initMobileMenu } from './mobile-menu.js';
 
 document.addEventListener('DOMContentLoaded', async () => {
-    // 1. Initialize i18n
+    // 1. Initialize i18n first so initial render has translations
     await initI18n();
 
-    // 2. Setup Language Switcher
-    const langSwitcher = document.getElementById('lang-switcher');
-    const currentLang = localStorage.getItem('vvk_lang') || 'en';
-    langSwitcher.value = currentLang;
-    langSwitcher.addEventListener('change', async (e) => {
-        await setLanguage(e.target.value);
-        renderPage(window.location.pathname); // Re-render page content with new language
-    });
+    // 2. Setup language switchers
+    setupLanguageSwitchers();
 
-    // 3. Initialize Router
+    // 3. Initialize core UI components
+    initLightbox();
+    initMobileMenu();
+    initAnimations();
+
+    // 4. Initialize router (will trigger first render)
     initRouter();
 
-    // 4. Initial Render based on current path
-    await renderPage(window.location.pathname);
-
-    // 5. Hide Loader
-    setTimeout(() => {
-        document.getElementById('loader').classList.add('hidden');
-    }, 500);
-
+    // 5. Hide preloader after everything is ready
+    hidePreloader();
 });
+
+function hidePreloader() {
+    const loader = document.getElementById('loader');
+    if (loader) {
+        // Ensure minimum display time for branding
+        setTimeout(() => {
+            loader.classList.add('hidden');
+            setTimeout(() => loader.style.display = 'none', 800);
+        }, 500);
+    }
+}
+
+function setupLanguageSwitchers() {
+    const currentLang = getCurrentLang();
+    const switchers = document.querySelectorAll('.lang-switcher');
+
+    switchers.forEach(select => {
+        select.value = currentLang;
+        select.addEventListener('change', async (e) => {
+            const lang = e.target.value;
+            await setLanguage(lang);
+
+            // Sync other select elements
+            switchers.forEach(s => {
+                if (s !== select) s.value = lang;
+            });
+        });
+    });
+}

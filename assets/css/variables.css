@@ -1,43 +1,175 @@
+/* ============================================================
+   VVK Foundation — Design Tokens
+   Color palette derived from the official VVK Foundation logo.
+   ============================================================ */
 :root {
-    /* Colors derived from Logo (Green & Blue tones) */
-    --clr-primary-green: #2b9348; /* From Logo */
-    --clr-primary-blue: #023e8a; /* From Logo */
-    --clr-accent-gold: #FBB03B; /* Gold Highlight */
-    --clr-text-main: #333333;
-    --clr-text-muted: #86868b;
-    --clr-bg-main: #fbfbfd;
-    --clr-bg-card: #ffffff;
-    --clr-bg-footer: #151516;
-    --clr-border: #eaeaea;
-    
-    /* Glassmorphism */
-    --glass-bg: rgba(255, 255, 255, 0.7);
-    --glass-border: rgba(255, 255, 255, 0.3);
-    
-    /* Typography */
-    --font-heading: 'Inter', sans-serif;
-    --font-main: 'Inter', sans-serif;
-    --font-body: 'Inter', sans-serif;
-    
-    /* Spacing */
-    --space-xs: 0.5rem;
-    --space-sm: 1rem;
-    --space-md: 2rem;
-    --space-lg: 4rem;
-    --space-xl: 8rem;
-    
-    /* Border Radius */
-    --radius-sm: 8px;
-    --radius-md: 16px;
-    --radius-lg: 24px;
-    
-    /* Transitions */
-    --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-medium: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-slow: 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-    
-    /* Shadows */
-    --shadow-sm: 0 4px 6px rgba(0,0,0,0.05);
-    --shadow-md: 0 10px 30px rgba(0,0,0,0.08);
-    --shadow-lg: 0 20px 40px rgba(0,0,0,0.12);
+    /* ── Primary Palette (from logo) ───────────────────────── */
+    --clr-green-50:  #E8F5E9;
+    --clr-green-100: #C8E6C9;
+    --clr-green-200: #A5D6A7;
+    --clr-green-300: #66BB6A;
+    --clr-green-400: #43A047;
+    --clr-green-500: #2B9348;   /* Logo primary green */
+    --clr-green-600: #237A3B;
+    --clr-green-700: #1B5E2E;
+    --clr-green-800: #113626;
+    --clr-green-900: #0B1F17;
+
+    --clr-blue-50:  #E3F2FD;
+    --clr-blue-100: #BBDEFB;
+    --clr-blue-200: #90CAF9;
+    --clr-blue-300: #42A5F5;
+    --clr-blue-400: #1E88E5;
+    --clr-blue-500: #023E8A;   /* Logo primary blue */
+    --clr-blue-600: #032E65;
+    --clr-blue-700: #022247;
+    --clr-blue-800: #011730;
+    --clr-blue-900: #010D1C;
+
+    --clr-gold-50:  #FFF8E1;
+    --clr-gold-100: #FFECB3;
+    --clr-gold-200: #FFD54F;
+    --clr-gold-300: #FFC107;
+    --clr-gold-400: #D4A843;   /* Refined accent gold */
+    --clr-gold-500: #B8922E;
+
+    /* ── Semantic Colors ──────────────────────────────────── */
+    --clr-primary:     var(--clr-green-500);
+    --clr-primary-dark: var(--clr-green-700);
+    --clr-secondary:   var(--clr-blue-500);
+    --clr-accent:      var(--clr-gold-400);
+
+    --clr-success: #16a34a;
+    --clr-warning: #d97706;
+    --clr-error:   #dc2626;
+    --clr-info:    #2563eb;
+
+    /* ── Text Colors ──────────────────────────────────────── */
+    --clr-text-primary:   #1a1a2e;
+    --clr-text-secondary: #4a5568;
+    --clr-text-muted:     #86868b;
+    --clr-text-light:     #a0aec0;
+    --clr-text-inverse:   #ffffff;
+
+    /* ── Background Colors ────────────────────────────────── */
+    --clr-bg-primary:   #ffffff;
+    --clr-bg-secondary: #FAFBF7;
+    --clr-bg-tertiary:  #F1F5F0;
+    --clr-bg-dark:      var(--clr-green-800);
+    --clr-bg-darker:    var(--clr-green-900);
+
+    /* ── Surface / Cards ──────────────────────────────────── */
+    --clr-surface:       #ffffff;
+    --clr-surface-hover: #f8faf8;
+    --clr-border:        #e2e8f0;
+    --clr-border-light:  #edf2f7;
+    --clr-divider:       rgba(0, 0, 0, 0.06);
+
+    /* ── Glassmorphism ────────────────────────────────────── */
+    --glass-bg:       rgba(255, 255, 255, 0.82);
+    --glass-bg-dark:  rgba(255, 255, 255, 0.95);
+    --glass-border:   rgba(255, 255, 255, 0.25);
+    --glass-blur:     20px;
+
+    /* ── Typography ───────────────────────────────────────── */
+    --font-heading: 'Playfair Display', 'Georgia', serif;
+    --font-body:    'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-mono:    'SF Mono', 'Fira Code', monospace;
+
+    /* Fluid type scale (clamp: min, preferred, max) */
+    --fs-display:  clamp(2.8rem, 5vw + 1rem, 5rem);
+    --fs-h1:       clamp(2.2rem, 3.5vw + 0.5rem, 3.5rem);
+    --fs-h2:       clamp(1.6rem, 2.5vw + 0.5rem, 2.5rem);
+    --fs-h3:       clamp(1.25rem, 1.5vw + 0.5rem, 1.75rem);
+    --fs-h4:       clamp(1.1rem, 1.2vw + 0.3rem, 1.35rem);
+    --fs-body-lg:  1.125rem;
+    --fs-body:     1rem;
+    --fs-body-sm:  0.875rem;
+    --fs-caption:  0.8125rem;
+    --fs-overline: 0.75rem;
+
+    --lh-tight:    1.15;
+    --lh-snug:     1.3;
+    --lh-normal:   1.6;
+    --lh-relaxed:  1.8;
+
+    --ls-tight:   -0.02em;
+    --ls-normal:   0;
+    --ls-wide:     0.05em;
+    --ls-wider:    0.1em;
+    --ls-widest:   0.15em;
+
+    /* ── Spacing Scale ────────────────────────────────────── */
+    --space-2xs: 0.25rem;   /*  4px */
+    --space-xs:  0.5rem;    /*  8px */
+    --space-sm:  0.75rem;   /* 12px */
+    --space-md:  1rem;      /* 16px */
+    --space-lg:  1.5rem;    /* 24px */
+    --space-xl:  2rem;      /* 32px */
+    --space-2xl: 3rem;      /* 48px */
+    --space-3xl: 4rem;      /* 64px */
+    --space-4xl: 6rem;      /* 96px */
+    --space-5xl: 8rem;      /* 128px */
+
+    /* Section spacing (responsive via clamp) */
+    --section-pad: clamp(3rem, 6vw, 7rem);
+
+    /* ── Layout ───────────────────────────────────────────── */
+    --container-max: 1200px;
+    --container-narrow: 800px;
+    --container-wide: 1400px;
+    --container-pad: clamp(1rem, 4vw, 2.5rem);
+
+    /* ── Border Radius ────────────────────────────────────── */
+    --radius-xs:   4px;
+    --radius-sm:   8px;
+    --radius-md:   12px;
+    --radius-lg:   16px;
+    --radius-xl:   24px;
+    --radius-2xl:  32px;
+    --radius-full: 9999px;
+
+    /* ── Shadows / Elevation ──────────────────────────────── */
+    --shadow-xs:  0 1px 2px rgba(0, 0, 0, 0.04);
+    --shadow-sm:  0 2px 8px rgba(0, 0, 0, 0.06);
+    --shadow-md:  0 4px 16px rgba(0, 0, 0, 0.08);
+    --shadow-lg:  0 8px 32px rgba(0, 0, 0, 0.10);
+    --shadow-xl:  0 16px 48px rgba(0, 0, 0, 0.12);
+    --shadow-2xl: 0 24px 64px rgba(0, 0, 0, 0.16);
+    --shadow-inner: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+    --shadow-glow-green: 0 0 20px rgba(43, 147, 72, 0.25);
+    --shadow-glow-gold:  0 0 20px rgba(212, 168, 67, 0.25);
+
+    /* ── Transitions ──────────────────────────────────────── */
+    --ease-out:    cubic-bezier(0.16, 1, 0.3, 1);
+    --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+    --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+    --duration-fast:   150ms;
+    --duration-normal: 300ms;
+    --duration-slow:   500ms;
+    --duration-slower:  800ms;
+
+    --transition-fast:   var(--duration-fast) var(--ease-in-out);
+    --transition-normal: var(--duration-normal) var(--ease-out);
+    --transition-slow:   var(--duration-slow) var(--ease-out);
+    --transition-slower: var(--duration-slower) var(--ease-out);
+
+    /* ── Z-Index Scale ────────────────────────────────────── */
+    --z-behind:    -1;
+    --z-base:       0;
+    --z-dropdown:  10;
+    --z-sticky:    20;
+    --z-fixed:     30;
+    --z-backdrop:  40;
+    --z-modal:     50;
+    --z-popover:   60;
+    --z-tooltip:   70;
+    --z-toast:     80;
+    --z-loader:    90;
+    --z-max:      100;
+
+    /* ── Navbar ────────────────────────────────────────────── */
+    --navbar-height: 80px;
+    --navbar-height-scrolled: 64px;
 }

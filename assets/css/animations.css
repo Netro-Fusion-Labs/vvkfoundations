@@ -1,51 +1,149 @@
-/* Scroll Animations */
+/* ============================================================
+   VVK Foundation — Animation System
+   Scroll reveals, parallax, counters, stagger system,
+   page transitions, and micro-interactions.
+   ============================================================ */
+
+/* ── Reveal Base ─────────────────────────────────────────── */
 .reveal {
     opacity: 0;
     transform: translateY(30px);
-    transition: all var(--transition-slow);
+    transition: opacity var(--duration-slower) var(--ease-out),
+                transform var(--duration-slower) var(--ease-out);
+    will-change: opacity, transform;
 }
 
 .reveal.active {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0) translateX(0) scale(1);
 }
 
-.reveal.slide-left {
+/* ── Reveal Directions ───────────────────────────────────── */
+.reveal--up {
+    transform: translateY(40px);
+}
+
+.reveal--down {
+    transform: translateY(-40px);
+}
+
+.reveal--left {
     transform: translateX(-50px);
 }
 
-.reveal.slide-right {
+.reveal--right {
     transform: translateX(50px);
 }
 
-.reveal.slide-left.active, .reveal.slide-right.active {
-    transform: translateX(0);
+.reveal--scale {
+    transform: scale(0.92);
 }
 
-.reveal.scale-up {
-    transform: scale(0.9);
+.reveal--fade {
+    transform: none;
 }
 
-.reveal.scale-up.active {
-    transform: scale(1);
-}
+/* ── Stagger System ──────────────────────────────────────── */
+.stagger-1 { transition-delay: 0.08s; }
+.stagger-2 { transition-delay: 0.16s; }
+.stagger-3 { transition-delay: 0.24s; }
+.stagger-4 { transition-delay: 0.32s; }
+.stagger-5 { transition-delay: 0.40s; }
+.stagger-6 { transition-delay: 0.48s; }
 
-/* Staggered Children */
-.stagger-1 { transition-delay: 0.1s; }
-.stagger-2 { transition-delay: 0.2s; }
-.stagger-3 { transition-delay: 0.3s; }
-.stagger-4 { transition-delay: 0.4s; }
-
-/* Image Hover Zoom */
-.img-hover-zoom {
+/* ── Image Hover Effects ─────────────────────────────────── */
+.img-zoom {
     overflow: hidden;
-    border-radius: var(--radius-md);
+    border-radius: var(--radius-lg);
 }
 
-.img-hover-zoom img {
-    transition: transform 0.6s ease;
+.img-zoom img {
+    transition: transform 0.6s var(--ease-out);
 }
 
-.img-hover-zoom:hover img {
-    transform: scale(1.05);
+.img-zoom:hover img {
+    transform: scale(1.06);
+}
+
+/* ── Pulse Animation ─────────────────────────────────────── */
+@keyframes pulse-soft {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.6; }
+}
+
+.pulse-soft {
+    animation: pulse-soft 2s ease-in-out infinite;
+}
+
+/* ── Float Animation ─────────────────────────────────────── */
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+}
+
+.float {
+    animation: float 4s ease-in-out infinite;
+}
+
+/* ── Bounce Down ─────────────────────────────────────────── */
+@keyframes bounce-down {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-8px); }
+    60% { transform: translateY(-4px); }
+}
+
+.bounce-down {
+    animation: bounce-down 2s infinite;
+}
+
+/* ── Gradient Shift (for hero backgrounds) ───────────────── */
+@keyframes gradient-shift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* ── Counter Animation (handled by JS) ───────────────────── */
+.counter {
+    font-variant-numeric: tabular-nums;
+}
+
+/* ── Magnetic Button Hover ───────────────────────────────── */
+.magnetic {
+    transition: transform var(--transition-fast);
+}
+
+/* ── Shimmer Loading Effect ──────────────────────────────── */
+@keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+}
+
+.shimmer {
+    background: linear-gradient(90deg,
+        var(--clr-border-light) 25%,
+        var(--clr-bg-secondary) 50%,
+        var(--clr-border-light) 75%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 1.5s ease-in-out infinite;
+}
+
+/* ── Reduced Motion ──────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+    .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+
+    .float,
+    .bounce-down,
+    .pulse-soft {
+        animation: none;
+    }
+
+    .img-zoom img {
+        transition: none;
+    }
 }

@@ -1,107 +1,207 @@
+/**
+ * VVK Foundation — Animations Engine
+ * Scroll reveals via IntersectionObserver, magnetic buttons,
+ * navbar scroll effect, animated counters, and scroll progress.
+ */
+
+/**
+ * Initialize all animations on page load.
+ */
 export function initAnimations() {
-    setupIntersectionObserver();
-    setupMagneticButtons();
     setupNavbarScroll();
-    setupCounters();
+    setupScrollProgress();
+    setupBackToTop();
+    reinitAnimations();
 }
 
+/**
+ * Re-initialize animations after a route change.
+ * Deferred slightly to allow DOM to settle.
+ */
 export function reinitAnimations() {
-    // Called after a route change and page render
-    setTimeout(() => {
+    requestAnimationFrame(() => {
         setupIntersectionObserver();
         setupMagneticButtons();
         setupCounters();
-    }, 100);
+    });
 }
 
+/* ── Intersection Observer for Scroll Reveals ────────────── */
 function setupIntersectionObserver() {
-    const reveals = document.querySelectorAll('.reveal');
-    
+    const reveals = document.querySelectorAll('.reveal:not(.active)');
+    if (reveals.length === 0) return;
+
     if ('IntersectionObserver' in window) {
-        const observer = new IntersectionObserver((entries, observer) => {
+        const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('active');
-                    observer.unobserve(entry.target); // Run once
+                    observer.unobserve(entry.target);
                 }
             });
-        }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
-        
+        }, {
+            threshold: 0.08,
+            rootMargin: '0px 0px -40px 0px'
+        });
+
         reveals.forEach(el => observer.observe(el));
     } else {
+        // Fallback: show everything immediately
         reveals.forEach(el => el.classList.add('active'));
     }
 }
 
+/* ── Magnetic Button Hover Effect ────────────────────────── */
 function setupMagneticButtons() {
     const magnets = document.querySelectorAll('.magnetic');
-    
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (prefersReducedMotion) return;
+
     magnets.forEach(btn => {
+        // Avoid duplicate listeners
+        if (btn.dataset.magneticInit) return;
+        btn.dataset.magneticInit = 'true';
+
         btn.addEventListener('mousemove', e => {
             const rect = btn.getBoundingClientRect();
-            const h = rect.width / 2;
-            const v = rect.height / 2;
-            const x = e.clientX - rect.left - h;
-            const y = e.clientY - rect.top - v;
-            
-            btn.style.transform = `translate(${x * 0.2}px, ${y * 0.2}px)`;
+            const x = e.clientX - rect.left - rect.width / 2;
+            const y = e.clientY - rect.top - rect.height / 2;
+            btn.style.transform = `translate(${x * 0.15}px, ${y * 0.15}px)`;
         });
-        
+
         btn.addEventListener('mouseleave', () => {
-            btn.style.transform = `translate(0px, 0px)`;
+            btn.style.transform = 'translate(0, 0)';
         });
     });
 }
 
+/* ── Navbar Scroll State ─────────────────────────────────── */
 function setupNavbarScroll() {
     const navbar = document.getElementById('navbar');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            navbar.style.padding = '0';
-            navbar.style.background = 'rgba(255, 255, 255, 0.9)';
-            navbar.style.boxShadow = '0 4px 20px rgba(0,0,0,0.05)';
-        } else {
-            navbar.style.padding = '10px 0';
-            navbar.style.background = 'var(--glass-bg)';
-            navbar.style.boxShadow = 'none';
+    if (!navbar) return;
+
+    let ticking = false;
+
+    const onScroll = () => {
+        if (!ticking) {
+            requestAnimationFrame(() => {
+                if (window.scrollY > 60) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+                ticking = false;
+            });
+            ticking = true;
         }
+    };
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+
+    // Set initial state
+    if (window.scrollY > 60) {
+        navbar.classList.add('scrolled');
+    }
+}
+
+/* ── Scroll Progress Bar ─────────────────────────────────── */
+function setupScrollProgress() {
+    const progressBar = document.querySelector('.scroll-progress');
+    if (!progressBar) return;
+
+    let ticking = false;
+
+    window.addEventListener('scroll', () => {
+        if (!ticking) {
+            requestAnimationFrame(() => {
+                const scrollTop = window.scrollY;
+                const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+                const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+                progressBar.style.width = `${progress}%`;
+                ticking = false;
+            });
+            ticking = true;
+        }
+    }, { passive: true });
+}
+
+/* ── Back to Top Button ──────────────────────────────────── */
+function setupBackToTop() {
+    const btn = document.getElementById('back-to-top');
+    if (!btn) return;
+
+    let ticking = false;
+
+    window.addEventListener('scroll', () => {
+        if (!ticking) {
+            requestAnimationFrame(() => {
+                if (window.scrollY > 500) {
+                    btn.classList.add('visible');
+                } else {
+                    btn.classList.remove('visible');
+                }
+                ticking = false;
+            });
+            ticking = true;
+        }
+    }, { passive: true });
+
+    btn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 }
 
+/* ── Animated Counters ───────────────────────────────────── */
 function setupCounters() {
     const counters = document.querySelectorAll('.counter');
-    const speed = 200; // lower is faster
+    if (counters.length === 0) return;
 
     if ('IntersectionObserver' in window) {
-        const observer = new IntersectionObserver((entries, observer) => {
+        const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    const counter = entry.target;
-                    const updateCount = () => {
-                        const target = +counter.getAttribute('data-target');
-                        const count = +counter.innerText;
-                        const inc = target / speed;
-
-                        if (count < target) {
-                            counter.innerText = Math.ceil(count + inc);
-                            setTimeout(updateCount, 15);
-                        } else {
-                            counter.innerText = target;
-                        }
-                    };
-                    updateCount();
-                    observer.unobserve(counter);
+                    animateCounter(entry.target);
+                    observer.unobserve(entry.target);
                 }
             });
-        }, { threshold: 0.1 });
-        
+        }, { threshold: 0.2 });
+
         counters.forEach(counter => {
-            counter.innerText = '0';
+            counter.textContent = '0';
             observer.observe(counter);
         });
     } else {
         counters.forEach(counter => {
-            counter.innerText = counter.getAttribute('data-target');
+            counter.textContent = counter.dataset.target || '0';
         });
     }
+}
+
+/**
+ * Animate a single counter from 0 to its target value.
+ */
+function animateCounter(el) {
+    const target = parseInt(el.dataset.target, 10) || 0;
+    const duration = 2000; // 2 seconds
+    const startTime = performance.now();
+
+    function update(currentTime) {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+
+        // Ease-out curve for natural deceleration
+        const eased = 1 - Math.pow(1 - progress, 3);
+        const currentValue = Math.round(eased * target);
+
+        el.textContent = currentValue.toLocaleString();
+
+        if (progress < 1) {
+            requestAnimationFrame(update);
+        } else {
+            el.textContent = target.toLocaleString();
+        }
+    }
+
+    requestAnimationFrame(update);
 }
