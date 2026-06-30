@@ -150,8 +150,8 @@ function renderHome() {
 
         <section class="section bg-card">
             <div class="container grid-2-col align-center">
-                <div class="founder-snippet-img reveal slide-left">
-                    <img src="/assets/images/extracted/img-036.png" alt="Founder" class="radius-lg shadow-md" style="width: 100%; max-width: 400px; border-radius: var(--radius-lg);">
+                <div class="founder-snippet-img reveal slide-left" style="text-align: center;">
+                    <img src="/assets/images/founder.png" alt="Founder" class="radius-lg shadow-md" style="width: 100%; max-width: 280px; border-radius: var(--radius-lg); margin: 0 auto;">
                 </div>
                 <div class="founder-snippet-text reveal slide-right">
                     <h2 data-i18n="home.founder_title">From the Founder's Desk</h2>

@@ -279,6 +279,10 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: var(--space-xl);
+    align-items: center;
+}
+
+.about-content .grid-2-col {
     align-items: flex-start;
 }
 
