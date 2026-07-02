@@ -4,7 +4,7 @@
  * impact stats, founder preview, initiatives, reach, and CTA.
  */
 
-import { translate } from '../i18n.js';
+import { translate } from '../i18n.js?v=1.2.0';
 
 export function renderHome() {
     return `

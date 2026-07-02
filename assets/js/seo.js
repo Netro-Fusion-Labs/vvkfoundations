@@ -4,22 +4,22 @@
  * canonical URLs, and Open Graph for each route.
  */
 
-import { translate } from './i18n.js';
+import { translate } from './i18n.js?v=1.2.0';
 
 /** Per-page SEO configuration */
 const pageSeoConfig = {
-    '/':            { titleKey: 'seo.home_title',        descKey: 'seo.home_desc',        type: 'website' },
-    '/about':       { titleKey: 'seo.about_title',       descKey: 'seo.about_desc',       type: 'article' },
-    '/founder':     { titleKey: 'seo.founder_title',     descKey: 'seo.founder_desc',     type: 'profile' },
+    '/': { titleKey: 'seo.home_title', descKey: 'seo.home_desc', type: 'website' },
+    '/about': { titleKey: 'seo.about_title', descKey: 'seo.about_desc', type: 'article' },
+    '/founder': { titleKey: 'seo.founder_title', descKey: 'seo.founder_desc', type: 'profile' },
     '/initiatives': { titleKey: 'seo.initiatives_title', descKey: 'seo.initiatives_desc', type: 'article' },
-    '/gallery':     { titleKey: 'seo.gallery_title',     descKey: 'seo.gallery_desc',     type: 'website' },
-    '/contact':     { titleKey: 'seo.contact_title',     descKey: 'seo.contact_desc',     type: 'website' },
-    '/reports':     { titleKey: 'seo.reports_title',     descKey: 'seo.reports_desc',     type: 'article' },
-    '/news':        { titleKey: 'seo.news_title',        descKey: 'seo.news_desc',        type: 'article' },
-    '/volunteer':   { titleKey: 'seo.volunteer_title',   descKey: 'seo.volunteer_desc',   type: 'website' },
-    '/faq':         { titleKey: 'seo.faq_title',         descKey: 'seo.faq_desc',         type: 'website' },
-    '/privacy':     { titleKey: 'seo.privacy_title',     descKey: 'seo.privacy_desc',     type: 'article' },
-    '/terms':       { titleKey: 'seo.terms_title',       descKey: 'seo.terms_desc',       type: 'article' }
+    '/gallery': { titleKey: 'seo.gallery_title', descKey: 'seo.gallery_desc', type: 'website' },
+    '/contact': { titleKey: 'seo.contact_title', descKey: 'seo.contact_desc', type: 'website' },
+    '/reports': { titleKey: 'seo.reports_title', descKey: 'seo.reports_desc', type: 'article' },
+    '/news': { titleKey: 'seo.news_title', descKey: 'seo.news_desc', type: 'article' },
+    '/volunteer': { titleKey: 'seo.volunteer_title', descKey: 'seo.volunteer_desc', type: 'website' },
+    '/faq': { titleKey: 'seo.faq_title', descKey: 'seo.faq_desc', type: 'website' },
+    '/privacy': { titleKey: 'seo.privacy_title', descKey: 'seo.privacy_desc', type: 'article' },
+    '/terms': { titleKey: 'seo.terms_title', descKey: 'seo.terms_desc', type: 'article' }
 };
 
 const BASE_URL = 'https://www.vvkfoundation.in';

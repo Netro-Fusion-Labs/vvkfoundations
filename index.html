@@ -1,46 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#2b9348">
-    
+
     <!-- Primary Meta Tags (managed dynamically by seo.js) -->
     <title>VVK Foundation — Empower. Enable. Employ.</title>
-    <meta name="description" content="VVK Foundation is dedicated to empowering marginalized sections of society, focusing on farmers, women, and youth in Karnataka.">
-    
+    <meta name="description"
+        content="VVK Foundation is dedicated to empowering marginalized sections of society, focusing on farmers, women, and youth in Karnataka.">
+
     <!-- PWA Manifest & Favicon -->
     <link rel="manifest" href="/manifest.json">
     <link rel="icon" type="image/png" href="/assets/images/Logo_tab_icon.png">
-    
+
     <!-- Preconnect to external domains -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
 
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap"
+        rel="stylesheet">
+
     <!-- FontAwesome (Icons) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <!-- CSS Design System -->
-    <link rel="stylesheet" href="/assets/css/variables.css?v=1.1">
-    <link rel="stylesheet" href="/assets/css/reset.css?v=1.1">
-    <link rel="stylesheet" href="/assets/css/utilities.css?v=1.1">
-    <link rel="stylesheet" href="/assets/css/global.css?v=1.1">
-    <link rel="stylesheet" href="/assets/css/components.css?v=1.1">
-    <link rel="stylesheet" href="/assets/css/animations.css?v=1.1">
-    <link rel="stylesheet" href="/assets/css/pages.css?v=1.1">
+    <link rel="stylesheet" href="/assets/css/variables.css?v=1.2.0">
+    <link rel="stylesheet" href="/assets/css/reset.css?v=1.2.0">
+    <link rel="stylesheet" href="/assets/css/utilities.css?v=1.2.0">
+    <link rel="stylesheet" href="/assets/css/global.css?v=1.2.0">
+    <link rel="stylesheet" href="/assets/css/components.css?v=1.2.0">
+    <link rel="stylesheet" href="/assets/css/animations.css?v=1.2.0">
+    <link rel="stylesheet" href="/assets/css/pages.css?v=1.2.0">
 
     <!-- Preloader Styles (inline for speed) -->
     <style>
-        .preloader { position: fixed; inset: 0; background: #ffffff; z-index: 9999; display: flex; align-items: center; justify-content: center; transition: opacity 0.5s ease; }
-        .preloader.hidden { opacity: 0; pointer-events: none; }
-        .spinner { width: 40px; height: 40px; border: 3px solid rgba(43, 147, 72, 0.2); border-radius: 50%; border-top-color: #2b9348; animation: spin 1s ease-in-out infinite; }
-        @keyframes spin { to { transform: rotate(360deg); } }
+        .preloader {
+            position: fixed;
+            inset: 0;
+            background: #ffffff;
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.5s ease;
+        }
+
+        .preloader.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .spinner {
+            width: 40px;
+            height: 40px;
+            border: 3px solid rgba(43, 147, 72, 0.2);
+            border-radius: 50%;
+            border-top-color: #2b9348;
+            animation: spin 1s ease-in-out infinite;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
     </style>
 </head>
+
 <body>
 
     <!-- Accessibility Skip Link -->
@@ -102,8 +133,9 @@
                         <option value="hi">हिंदी</option>
                     </select>
                 </div>
-                <a href="/volunteer" data-route class="btn btn--primary btn--sm hide-mobile magnetic" data-i18n="nav.donate">Support Us</a>
-                
+                <a href="/volunteer" data-route class="btn btn--primary btn--sm hide-mobile magnetic"
+                    data-i18n="nav.donate">Support Us</a>
+
                 <button class="mobile-menu-btn" aria-label="Toggle Menu" aria-expanded="false">
                     <span></span>
                     <span></span>
@@ -124,9 +156,11 @@
             <div class="footer-top">
                 <!-- Brand Col -->
                 <div class="footer-brand">
-                    <img src="/assets/images/logo.png" alt="VVK Foundation" class="footer-logo" style="background-color: #ffffff; padding: 6px 12px; border-radius: 6px;">
+                    <img src="/assets/images/logo.png" alt="VVK Foundation" class="footer-logo"
+                        style="background-color: #ffffff; padding: 6px 12px; border-radius: 6px;">
                     <div class="footer-tag" data-i18n="footer.tag">Grassroots Impact</div>
-                    <p data-i18n="footer.description">VVK Foundation empowers marginalized communities in Karnataka through education, healthcare, and sustainable development initiatives.</p>
+                    <p data-i18n="footer.description">VVK Foundation empowers marginalized communities in Karnataka
+                        through education, healthcare, and sustainable development initiatives.</p>
                 </div>
 
                 <!-- Quick Links -->
@@ -155,25 +189,36 @@
                 <div class="footer-col">
                     <h4 data-i18n="footer.contact">Contact Us</h4>
                     <ul>
-                        <li><i class="fas fa-map-marker-alt"></i> <span data-i18n="footer.address_label">Bagalkot, Karnataka</span></li>
-                        <li><i class="fas fa-envelope"></i> <a href="mailto:info@vvkfoundation.org">info@vvkfoundation.org</a></li>
-                        <li><i class="fas fa-phone-alt"></i> <a href="tel:+910000000000" data-i18n="footer.phone">+91 XXXXX XXXXX</a></li>
+                        <li><i class="fas fa-map-marker-alt"></i> <span data-i18n="footer.address_label">Bagalkot,
+                                Karnataka</span></li>
+                        <li><i class="fas fa-envelope"></i> <a
+                                href="mailto:info@vvkfoundation.org">info@vvkfoundation.org</a></li>
+                        <li><i class="fas fa-phone-alt"></i> <a href="tel:+910000000000" data-i18n="footer.phone">+91
+                                XXXXX XXXXX</a></li>
                     </ul>
                     <div class="footer-social">
-                        <a href="https://www.facebook.com/VVKFoundation.in/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.instagram.com/vvkFoundation.in" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.youtube.com/@VVKFoundation_in" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                        <a href="https://www.linkedin.com/company/vvkfoundationdotin/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="https://whatsapp.com/channel/0029Vb7yFxOA2pLFnKvmLz0L" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.facebook.com/VVKFoundation.in/" target="_blank" rel="noopener noreferrer"
+                            aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/vvkFoundation.in" target="_blank" rel="noopener noreferrer"
+                            aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/@VVKFoundation_in" target="_blank" rel="noopener noreferrer"
+                            aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.linkedin.com/company/vvkfoundationdotin/" target="_blank"
+                            rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://whatsapp.com/channel/0029Vb7yFxOA2pLFnKvmLz0L" target="_blank"
+                            rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
             </div>
 
             <div class="footer-bottom">
-                <div class="footer-copyright-col" style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; justify-content: center;">
+                <div class="footer-copyright-col"
+                    style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; justify-content: center;">
                     <span data-i18n="footer.copyright">&copy; 2024 VVK Foundation. All rights reserved.</span>
                     <span class="footer-credit-divider" style="opacity: 0.5;">|</span>
-                    <span class="footer-credit">Designed by <a href="https://netrofusion.in/" target="_blank" rel="noopener noreferrer" style="color: var(--clr-accent); font-weight: 500;">Netro Fusion Labs</a></span>
+                    <span class="footer-credit">Designed by <a href="https://netrofusion.in/" target="_blank"
+                            rel="noopener noreferrer" style="color: var(--clr-accent); font-weight: 500;">Netro Fusion
+                            Labs</a></span>
                 </div>
                 <div class="legal-links">
                     <a href="/privacy" data-route data-i18n="footer.privacy">Privacy Policy</a>
@@ -189,13 +234,15 @@
     </button>
 
     <!-- Floating WhatsApp Button -->
-    <a href="https://whatsapp.com/channel/0029Vb7yFxOA2pLFnKvmLz0L" target="_blank" rel="noopener noreferrer" class="floating-whatsapp" aria-label="Join our WhatsApp Channel">
+    <a href="https://whatsapp.com/channel/0029Vb7yFxOA2pLFnKvmLz0L" target="_blank" rel="noopener noreferrer"
+        class="floating-whatsapp" aria-label="Join our WhatsApp Channel">
         <i class="fab fa-whatsapp"></i>
     </a>
 
 
     <!-- Core App Logic (Type Module enables modern ES6 imports) -->
-    <script type="module" src="/assets/js/app.js?v=1.1"></script>
+    <script type="module" src="/assets/js/app.js?v=1.2.0"></script>
 
 </body>
+
 </html>

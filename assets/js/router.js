@@ -4,48 +4,48 @@
  * page transitions, focus management, and ARIA announcements.
  */
 
-import { renderHome } from './pages/home.js';
-import { renderAbout } from './pages/about.js';
-import { renderFounder } from './pages/founder.js';
-import { renderInitiatives } from './pages/initiatives.js';
-import { renderGallery, initGalleryFilters } from './pages/gallery.js';
-import { renderContact, initContactForm } from './pages/contact.js';
-import { renderReports } from './pages/reports.js';
-import { renderNews } from './pages/news.js';
-import { renderVolunteer, initVolunteerForm } from './pages/volunteer.js';
-import { renderFaq, initFaqAccordion } from './pages/faq.js?v=1.1';
-import { renderPrivacy } from './pages/privacy.js';
-import { renderTerms } from './pages/terms.js';
-import { renderNotFound } from './pages/notfound.js';
+import { renderHome } from './pages/home.js?v=1.2.0';
+import { renderAbout } from './pages/about.js?v=1.2.0';
+import { renderFounder } from './pages/founder.js?v=1.2.0';
+import { renderInitiatives } from './pages/initiatives.js?v=1.2.0';
+import { renderGallery, initGalleryFilters } from './pages/gallery.js?v=1.2.0';
+import { renderContact, initContactForm } from './pages/contact.js?v=1.2.0';
+import { renderReports } from './pages/reports.js?v=1.2.0';
+import { renderNews } from './pages/news.js?v=1.2.0';
+import { renderVolunteer, initVolunteerForm } from './pages/volunteer.js?v=1.2.0';
+import { renderFaq, initFaqAccordion } from './pages/faq.js?v=1.2.0';
+import { renderPrivacy } from './pages/privacy.js?v=1.2.0';
+import { renderTerms } from './pages/terms.js?v=1.2.0';
+import { renderNotFound } from './pages/notfound.js?v=1.2.0';
 
-import { applyTranslations } from './i18n.js';
-import { reinitAnimations } from './animations.js';
-import { updateSEO } from './seo.js';
-import { bindGalleryItems } from './lightbox.js';
-import { updateMobileNavActive } from './mobile-menu.js';
+import { applyTranslations } from './i18n.js?v=1.2.0';
+import { reinitAnimations } from './animations.js?v=1.2.0';
+import { updateSEO } from './seo.js?v=1.2.0';
+import { bindGalleryItems } from './lightbox.js?v=1.2.0';
+import { updateMobileNavActive } from './mobile-menu.js?v=1.2.0';
 
 /** Route → render function map */
 const routes = {
-    '/':            renderHome,
-    '/about':       renderAbout,
-    '/founder':     renderFounder,
+    '/': renderHome,
+    '/about': renderAbout,
+    '/founder': renderFounder,
     '/initiatives': renderInitiatives,
-    '/gallery':     renderGallery,
-    '/contact':     renderContact,
-    '/reports':     renderReports,
-    '/news':        renderNews,
-    '/volunteer':   renderVolunteer,
-    '/faq':         renderFaq,
-    '/privacy':     renderPrivacy,
-    '/terms':       renderTerms
+    '/gallery': renderGallery,
+    '/contact': renderContact,
+    '/reports': renderReports,
+    '/news': renderNews,
+    '/volunteer': renderVolunteer,
+    '/faq': renderFaq,
+    '/privacy': renderPrivacy,
+    '/terms': renderTerms
 };
 
 /** Post-render hooks per route */
 const postRenderHooks = {
-    '/gallery':   [initGalleryFilters],
-    '/contact':   [initContactForm],
+    '/gallery': [initGalleryFilters],
+    '/contact': [initContactForm],
     '/volunteer': [initVolunteerForm],
-    '/faq':       [initFaqAccordion]
+    '/faq': [initFaqAccordion]
 };
 
 let currentPath = null;
