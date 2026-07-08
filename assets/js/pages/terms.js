@@ -48,7 +48,7 @@ export function renderTerms() {
 
             <h2>9. Contact</h2>
             <p>For questions about these Terms, contact us at:</p>
-            <p><strong>VVK Foundation</strong><br>Bagalkot District, Karnataka, India<br>Email: info@vvkfoundation.org</p>
+            <p><strong>VVK Foundation</strong><br>Bagalkot District, Karnataka, India<br>Email: info@vvkfoundation.in</p>
         </div>
     `;
 }

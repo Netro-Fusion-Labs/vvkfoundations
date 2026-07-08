@@ -28,14 +28,14 @@ export function renderContact() {
                             <i class="fas fa-envelope"></i>
                             <div>
                                 <h4 data-i18n="contact.email_label">Email</h4>
-                                <a href="mailto:info@vvkfoundation.org" data-i18n="contact.email">info@vvkfoundation.org</a>
+                                <a href="mailto:info@vvkfoundation.in" data-i18n="contact.email">info@vvkfoundation.in</a>
                             </div>
                         </div>
                         <div class="contact-info-item">
                             <i class="fas fa-phone-alt"></i>
                             <div>
                                 <h4 data-i18n="contact.phone_label">Phone</h4>
-                                <a href="tel:+910000000000" data-i18n="contact.phone">+91 XXXXX XXXXX</a>
+                                <a href="tel:+917676740862" data-i18n="contact.phone">+91 76767 40862</a>
                             </div>
                         </div>
                         <div class="footer-social mt-xl">
