@@ -4,11 +4,11 @@
  * initializes i18n, router, and core UI modules.
  */
 
-import { initI18n, getCurrentLang, setLanguage } from './i18n.js?v=1.2.0';
-import { initRouter } from './router.js?v=1.2.0';
-import { initAnimations } from './animations.js?v=1.2.0';
-import { initLightbox } from './lightbox.js?v=1.2.0';
-import { initMobileMenu } from './mobile-menu.js?v=1.2.0';
+import { initI18n, getCurrentLang, setLanguage } from './i18n.js?v=1.2.1';
+import { initRouter } from './router.js?v=1.2.1';
+import { initAnimations } from './animations.js?v=1.2.1';
+import { initLightbox } from './lightbox.js?v=1.2.1';
+import { initMobileMenu } from './mobile-menu.js?v=1.2.1';
 
 document.addEventListener('DOMContentLoaded', async () => {
     // 1. Initialize i18n first so initial render has translations

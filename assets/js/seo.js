@@ -4,7 +4,7 @@
  * canonical URLs, and Open Graph for each route.
  */
 
-import { translate } from './i18n.js?v=1.2.0';
+import { translate } from './i18n.js?v=1.2.1';
 
 /** Per-page SEO configuration */
 const pageSeoConfig = {

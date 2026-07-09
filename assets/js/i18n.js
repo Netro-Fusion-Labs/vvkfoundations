@@ -48,7 +48,7 @@ export function getCurrentLang() {
  */
 async function loadTranslations(lang) {
     try {
-        const response = await fetch(`/assets/lang/${lang}.json?v=1.2.0`);
+        const response = await fetch(`/assets/lang/${lang}.json?v=1.2.1`);
         if (!response.ok) throw new Error(`HTTP ${response.status}`);
         translations = await response.json();
     } catch (error) {
