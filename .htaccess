@@ -1,11 +1,14 @@
-# Enable rewrite engine for SPA routing
+# Enable rewrite engine for SPA routing & clean URLs
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
   
-  # Ignore asset directories
+  # Ignore asset directories & pdfs
   RewriteRule ^assets/ - [L]
   RewriteRule ^pdf/ - [L]
+
+  # Explicit clean rewrite for farmer-award
+  RewriteRule ^farmer-award/?$ farmer-award.html [L,NC]
 
   # Ignore existing files and directories
   RewriteCond %{REQUEST_FILENAME} !-f

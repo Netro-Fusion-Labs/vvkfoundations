@@ -77,8 +77,8 @@ export function renderHome() {
                     </div>
                     <div class="feature-card reveal reveal--up stagger-3">
                         <div class="feature-icon"><i class="fas fa-map-marker-alt"></i></div>
-                        <h4 data-i18n="home.feat_3_title">Kalyana Karnataka</h4>
-                        <p data-i18n="home.feat_3_desc">Serving communities deeply across the Kalyana Karnataka region and beyond.</p>
+                        <h4 data-i18n="home.feat_3_title">Mumbai Karnataka</h4>
+                        <p data-i18n="home.feat_3_desc">Serving communities deeply across the Mumbai Karnataka region and beyond.</p>
                     </div>
                     <div class="feature-card reveal reveal--up stagger-4">
                         <div class="feature-icon"><i class="fas fa-hands-helping"></i></div>
@@ -207,6 +207,143 @@ export function renderHome() {
                             <p class="text-sm text-muted mt-xs" data-i18n="home.reach_3_desc">Cultural & Healthcare Initiatives</p>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════ SOCIAL & COMMUNITY HUBS (INSTAGRAM, FACEBOOK, YOUTUBE) ═══════ -->
+        <section class="social-hub-section" id="social-hub">
+            <div class="container">
+                <div class="section-header reveal reveal--up text-center">
+                    <span class="section-label section-label--social"><i class="fas fa-share-alt"></i> <span data-i18n="home.social_label">SOCIAL & COMMUNITY HUBS</span></span>
+                    <h2 data-i18n="home.social_title">Stay Connected with VVK Foundation</h2>
+                    <p data-i18n="home.social_desc">Follow our real-time updates, community stories, and video highlights on Instagram, Facebook, and YouTube.</p>
+                </div>
+
+                <!-- Social Hub Grid (3 Columns for Instagram, Facebook, YouTube) -->
+                <div class="social-hub-grid">
+
+                    <!-- ── 1. INSTAGRAM FEED HUB ── -->
+                    <div class="social-hub-card insta-hub-card reveal reveal--up stagger-1">
+                        <div class="social-hub-header insta-header">
+                            <div class="social-platform-badge">
+                                <i class="fab fa-instagram"></i> Instagram
+                            </div>
+                            <div class="social-profile-info">
+                                <img src="/assets/images/logo.png" alt="VVK Foundation Instagram" class="social-avatar">
+                                <div>
+                                    <h4>vvkfoundation.in <i class="fas fa-check-circle verified-icon"></i></h4>
+                                    <span class="social-stats-badge">10K+ Followers • 150+ Posts</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="social-hub-body">
+                            <div class="social-mini-grid">
+                                <a href="https://www.instagram.com/vvkfoundation.in/" target="_blank" rel="noopener noreferrer" class="social-mini-item">
+                                    <img src="/assets/images/extracted/international_womensday_01.jpg" alt="Nari Shakti Conference" loading="lazy">
+                                    <div class="social-overlay"><span><i class="fas fa-heart"></i> 1.4k</span></div>
+                                </a>
+                                <a href="https://www.instagram.com/vvkfoundation.in/" target="_blank" rel="noopener noreferrer" class="social-mini-item">
+                                    <img src="/assets/images/extracted/launch_of_free_kas_psi_coaching_academy_01.jpg" alt="KAS & PSI Academy" loading="lazy">
+                                    <div class="social-overlay"><span><i class="fas fa-heart"></i> 2.1k</span></div>
+                                </a>
+                                <a href="https://www.instagram.com/vvkfoundation.in/" target="_blank" rel="noopener noreferrer" class="social-mini-item">
+                                    <img src="/assets/images/extracted/mega_cardiac_medical_health_camp_01.jpg" alt="Mega Health Camp" loading="lazy">
+                                    <div class="social-overlay"><span><i class="fas fa-heart"></i> 1.8k</span></div>
+                                </a>
+                                <a href="https://www.instagram.com/vvkfoundation.in/" target="_blank" rel="noopener noreferrer" class="social-mini-item">
+                                    <img src="/assets/images/extracted/banshankari_jathara_01.jpg" alt="Banashankari Jatra" loading="lazy">
+                                    <div class="social-overlay"><span><i class="fas fa-heart"></i> 3.2k</span></div>
+                                </a>
+                            </div>
+                            <p class="social-caption-preview">🌾 Real-time updates, event highlights, and community stories on Instagram.</p>
+                        </div>
+                        <div class="social-hub-footer">
+                            <a href="https://www.instagram.com/vvkfoundation.in/" target="_blank" rel="noopener noreferrer" class="btn btn--insta btn--block magnetic" data-i18n="home.insta_follow">
+                                <i class="fab fa-instagram"></i> Follow on Instagram
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- ── 2. FACEBOOK FEED HUB ── -->
+                    <div class="social-hub-card fb-hub-card reveal reveal--up stagger-2">
+                        <div class="social-hub-header fb-header">
+                            <div class="social-platform-badge">
+                                <i class="fab fa-facebook-f"></i> Facebook
+                            </div>
+                            <div class="social-profile-info">
+                                <img src="/assets/images/logo.png" alt="VVK Foundation Facebook" class="social-avatar">
+                                <div>
+                                    <h4>VVK Foundation <i class="fas fa-check-circle verified-icon"></i></h4>
+                                    <span class="social-stats-badge">Official Facebook Page</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="social-hub-body">
+                            <a href="https://www.facebook.com/VVKFoundation.in/" target="_blank" rel="noopener noreferrer" class="fb-post-preview" aria-label="Visit VVK Foundation Facebook Page">
+                                <div class="fb-post-preview-header">
+                                    <img src="/assets/images/logo.png" alt="VVK Foundation" class="fb-post-avatar">
+                                    <div class="fb-post-meta">
+                                        <strong>VVK Foundation <i class="fas fa-check-circle verified-icon"></i></strong>
+                                        <small>Official Page · <i class="fas fa-globe-americas"></i></small>
+                                    </div>
+                                    <i class="fab fa-facebook-f fb-post-icon"></i>
+                                </div>
+                                <div class="fb-post-media">
+                                    <img src="/assets/images/extracted/workshop_01.jpg" alt="VVK Foundation Community Event" loading="lazy">
+                                    <span class="fb-post-badge"><i class="fab fa-facebook-f"></i> View Page</span>
+                                </div>
+                                <div class="fb-post-stats">
+                                    <div class="fb-post-reactions">
+                                        <span class="fb-reaction-icon fb-reaction-like"><i class="fas fa-thumbs-up"></i></span>
+                                        <span class="fb-reaction-icon fb-reaction-love"><i class="fas fa-heart"></i></span>
+                                        <span class="fb-reaction-count">2.4k</span>
+                                    </div>
+                                    <span class="fb-stats-text">185 comments · 92 shares</span>
+                                </div>
+                            </a>
+                            <p class="social-caption-preview">📢 Official updates, news announcements, and live event broadcasts on Facebook.</p>
+                        </div>
+                        <div class="social-hub-footer">
+                            <a href="https://www.facebook.com/VVKFoundation.in/" target="_blank" rel="noopener noreferrer" class="btn btn--fb btn--block magnetic" data-i18n="home.fb_follow">
+                                <i class="fab fa-facebook-f"></i> Follow on Facebook
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- ── 3. YOUTUBE VIDEO HIGHLIGHTS HUB ── -->
+                    <div class="social-hub-card yt-hub-card reveal reveal--up stagger-3">
+                        <div class="social-hub-header yt-header">
+                            <div class="social-platform-badge">
+                                <i class="fab fa-youtube"></i> YouTube
+                            </div>
+                            <div class="social-profile-info">
+                                <img src="/assets/images/logo.png" alt="VVK Foundation YouTube" class="social-avatar">
+                                <div>
+                                    <h4>@VVKFoundation_in <i class="fas fa-check-circle verified-icon"></i></h4>
+                                    <span class="social-stats-badge">Official YouTube Channel</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="social-hub-body">
+                            <div class="yt-embed-box" id="yt-player-container">
+                                <div class="yt-video-thumbnail-box">
+                                    <img src="/assets/images/extracted/launch_of_free_kas_psi_coaching_academy_01.jpg" alt="VVK Foundation YouTube Video" loading="lazy">
+                                    <button type="button" class="yt-play-button" id="yt-play-btn" aria-label="Play YouTube Video" onclick="this.parentElement.innerHTML='<iframe src=\'https://www.youtube-nocookie.com/embed/5qap5aO4i9A?autoplay=1\' class=\'yt-iframe\' width=\'100%\' height=\'240\' frameborder=\'0\' allow=\'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\' allowfullscreen title=\'VVK Foundation YouTube Video\'></iframe>';">
+                                        <i class="fas fa-play"></i>
+                                    </button>
+                                    <span class="yt-duration">PLAY VIDEO</span>
+                                </div>
+                            </div>
+                            <p class="social-caption-preview">▶️ Play community transformation videos & event highlights on YouTube.</p>
+                        </div>
+                        <div class="social-hub-footer">
+                            <a href="https://www.youtube.com/@VVKFoundation_in" target="_blank" rel="noopener noreferrer" class="btn btn--yt btn--block magnetic" data-i18n="home.yt_subscribe">
+                                <i class="fab fa-youtube"></i> Subscribe on YouTube
+                            </a>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>

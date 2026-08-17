@@ -45,14 +45,14 @@ export function renderPrivacy() {
             <p>Our website uses minimal cookies for essential functionality, such as remembering your language preference. We do not use tracking cookies or third-party analytics.</p>
 
             <h2>6. Your Rights</h2>
-            <p>You have the right to access, correct, or delete your personal information. Contact us at <a href="mailto:info@vvkfoundation.in" style="color: var(--clr-primary);">info@vvkfoundation.in</a> to exercise these rights.</p>
+            <p>You have the right to access, correct, or delete your personal information. Contact us at <a href="mailto:info@vvkfoundation.org" style="color: var(--clr-primary);">info@vvkfoundation.org</a> to exercise these rights.</p>
 
             <h2>7. Changes to This Policy</h2>
             <p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new policy on this page.</p>
 
             <h2>8. Contact Us</h2>
             <p>If you have questions about this Privacy Policy, contact us at:</p>
-            <p><strong>VVK Foundation</strong><br>Bagalkot District, Karnataka, India<br>Email: info@vvkfoundation.in</p>
+            <p><strong>VVK Foundation</strong><br>Bagalkot District, Karnataka, India<br>Email: info@vvkfoundation.org</p>
         </div>
     `;
 }

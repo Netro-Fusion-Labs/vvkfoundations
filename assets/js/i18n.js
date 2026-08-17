@@ -78,6 +78,8 @@ export function translate(key) {
     return typeof result === 'string' ? result : key;
 }
 
+window.translate = translate;
+
 /**
  * Apply translations to all elements with data-i18n attributes.
  * Supports: textContent, placeholder, aria-label, title.

@@ -11,22 +11,29 @@ import { initLightbox } from './lightbox.js?v=1.2.1';
 import { initMobileMenu } from './mobile-menu.js?v=1.2.1';
 
 document.addEventListener('DOMContentLoaded', async () => {
-    // 1. Initialize i18n first so initial render has translations
-    await initI18n();
+    // Failsafe: hide preloader max after 1.2s
+    setTimeout(hidePreloader, 1200);
 
-    // 2. Setup language switchers
-    setupLanguageSwitchers();
+    try {
+        // 1. Initialize i18n first so initial render has translations
+        await initI18n();
 
-    // 3. Initialize core UI components
-    initLightbox();
-    initMobileMenu();
-    initAnimations();
+        // 2. Setup language switchers
+        setupLanguageSwitchers();
 
-    // 4. Initialize router (will trigger first render)
-    initRouter();
+        // 3. Initialize core UI components
+        initLightbox();
+        initMobileMenu();
+        initAnimations();
 
-    // 5. Hide preloader after everything is ready
-    hidePreloader();
+        // 4. Initialize router (will trigger first render)
+        initRouter();
+    } catch (err) {
+        console.warn('App bootstrap warning:', err);
+    } finally {
+        // 5. Hide preloader after ready
+        hidePreloader();
+    }
 });
 
 function hidePreloader() {

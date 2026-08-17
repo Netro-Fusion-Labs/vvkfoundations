@@ -863,3 +863,158 @@
         gap: var(--space-md);
     }
 }
+
+/* ── Join Community Page & QR Code ────────────────────────── */
+.qr-showcase-card {
+    background: var(--clr-surface);
+    border: 2px solid rgba(43, 147, 72, 0.2);
+    border-radius: var(--radius-xl);
+    padding: var(--space-xl);
+    box-shadow: var(--shadow-lg);
+}
+
+.qr-header-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(43, 147, 72, 0.1);
+    color: var(--clr-primary);
+    padding: 4px 14px;
+    border-radius: var(--radius-full);
+    font-size: var(--fs-caption);
+    font-weight: 700;
+    margin-bottom: var(--space-md);
+}
+
+.qr-code-box {
+    display: inline-block;
+    padding: var(--space-md);
+    background: #ffffff;
+    border: 1px solid var(--clr-border-light);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+}
+
+.join-benefits-list {
+    list-style: none;
+    padding: 0;
+    margin-top: var(--space-md);
+}
+
+.join-benefits-list li {
+    font-size: var(--fs-body-sm);
+    margin-bottom: var(--space-xs);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.live-classification-card {
+    background: linear-gradient(135deg, rgba(43, 147, 72, 0.06) 0%, rgba(52, 199, 89, 0.12) 100%);
+    border: 1px dashed var(--clr-primary);
+    border-radius: var(--radius-lg);
+    padding: var(--space-md) var(--space-lg);
+    margin-bottom: var(--space-lg);
+}
+
+.classification-header {
+    font-size: var(--fs-caption);
+    font-weight: 700;
+    color: var(--clr-primary);
+    text-transform: uppercase;
+    letter-spacing: var(--ls-wide);
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.classification-badge {
+    font-size: var(--fs-body);
+    font-weight: 700;
+    color: var(--clr-text-primary);
+    background: #ffffff;
+    padding: 8px 16px;
+    border-radius: var(--radius-md);
+    display: inline-block;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.skills-checkbox-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 8px;
+    margin-top: 6px;
+}
+
+.skill-chip {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--clr-bg-tertiary);
+    border: 1px solid var(--clr-border-light);
+    border-radius: var(--radius-md);
+    padding: 8px 12px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.skill-chip:hover {
+    background: rgba(43, 147, 72, 0.08);
+    border-color: var(--clr-primary);
+}
+
+.skill-chip input[type="checkbox"] {
+    accent-color: var(--clr-primary);
+}
+
+.join-success-card {
+    background: var(--clr-surface);
+    border: 2px solid var(--clr-primary);
+    border-radius: var(--radius-xl);
+    padding: var(--space-2xl);
+    text-align: center;
+    box-shadow: var(--shadow-xl);
+}
+
+.success-icon {
+    font-size: 3.5rem;
+    color: var(--clr-primary);
+    margin-bottom: var(--space-sm);
+}
+
+.member-receipt-box {
+    background: var(--clr-bg-tertiary);
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg);
+    margin: var(--space-lg) 0;
+    text-align: left;
+}
+
+.receipt-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 0;
+    border-bottom: 1px solid var(--clr-border-light);
+    font-size: 0.9rem;
+}
+
+.receipt-row:last-child {
+    border-bottom: none;
+}
+
+.btn--wa {
+    background: #25d366;
+    color: #ffffff !important;
+    border: none;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.35);
+}
+
+.btn--wa:hover {
+    background: #20ba5a;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.45);
+    color: #ffffff !important;
+}

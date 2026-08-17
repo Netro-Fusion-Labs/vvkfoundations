@@ -16,6 +16,8 @@ import { renderVolunteer, initVolunteerForm } from './pages/volunteer.js?v=1.2.1
 import { renderFaq, initFaqAccordion } from './pages/faq.js?v=1.2.1';
 import { renderPrivacy } from './pages/privacy.js?v=1.2.1';
 import { renderTerms } from './pages/terms.js?v=1.2.1';
+import { renderJoin, initJoinForm } from './pages/join.js?v=1.2.1';
+import { renderFarmerAward, initFarmerAwardForm } from './pages/farmer-award.js?v=1.2.1';
 import { renderNotFound } from './pages/notfound.js?v=1.2.1';
 
 import { applyTranslations } from './i18n.js?v=1.2.1';
@@ -37,7 +39,9 @@ const routes = {
     '/volunteer': renderVolunteer,
     '/faq': renderFaq,
     '/privacy': renderPrivacy,
-    '/terms': renderTerms
+    '/terms': renderTerms,
+    '/join': renderJoin,
+    '/farmer-award': renderFarmerAward
 };
 
 /** Post-render hooks per route */
@@ -45,7 +49,9 @@ const postRenderHooks = {
     '/gallery': [initGalleryFilters],
     '/contact': [initContactForm],
     '/volunteer': [initVolunteerForm],
-    '/faq': [initFaqAccordion]
+    '/faq': [initFaqAccordion],
+    '/join': [initJoinForm],
+    '/farmer-award': [initFarmerAwardForm]
 };
 
 let currentPath = null;
@@ -95,53 +101,72 @@ function renderPage(path) {
     const mainEl = document.getElementById('main-content');
     if (!mainEl) return;
 
-    currentPath = path;
+    // Normalize path (strip .html, hash, query params, trailing slashes)
+    let normalizedPath = path.split('?')[0].split('#')[0];
+    if (normalizedPath.endsWith('.html')) {
+        normalizedPath = normalizedPath.replace(/\.html$/, '');
+    }
+    if (normalizedPath.length > 1 && normalizedPath.endsWith('/')) {
+        normalizedPath = normalizedPath.slice(0, -1);
+    }
+    if (!normalizedPath) normalizedPath = '/';
+
+    currentPath = normalizedPath;
 
     // Determine the render function
-    const renderFn = routes[path] || renderNotFound;
-    const isNotFound = !routes[path];
+    const renderFn = routes[normalizedPath] || renderNotFound;
+    const isNotFound = !routes[normalizedPath];
 
-    // Page transition: fade out
-    mainEl.classList.add('fade-out');
-
-    setTimeout(() => {
-        // Inject new content
+    // Synchronously render content first
+    try {
         mainEl.innerHTML = renderFn();
+    } catch (err) {
+        console.error('Error rendering route:', err);
+    }
 
-        // Scroll to top
-        window.scrollTo(0, 0);
+    // Scroll to top
+    window.scrollTo(0, 0);
 
+    // Fade transition cleanup
+    mainEl.classList.remove('fade-out');
+    mainEl.style.opacity = '1';
+
+    try {
         // Apply i18n
         applyTranslations();
+    } catch (e) {}
 
+    try {
         // Update SEO
         updateSEO(isNotFound ? '/404' : path);
+    } catch (e) {}
 
+    try {
         // Update nav active states
         updateDesktopNavActive(path);
         updateMobileNavActive(path);
+    } catch (e) {}
 
+    try {
         // Re-initialize animations (reveals, counters, magnetics)
         reinitAnimations();
+    } catch (e) {}
 
+    try {
         // Bind lightbox items
         bindGalleryItems();
+    } catch (e) {}
 
+    try {
         // Run post-render hooks
-        if (postRenderHooks[path]) {
-            postRenderHooks[path].forEach(hook => hook());
+        if (postRenderHooks[normalizedPath]) {
+            postRenderHooks[normalizedPath].forEach(hook => hook());
         }
+    } catch (e) {}
 
-        // Fade in
-        mainEl.classList.remove('fade-out');
-
-        // Focus management for accessibility (screen readers)
-        mainEl.focus({ preventScroll: true });
-
-        // ARIA live announcement
-        announcePageChange(path);
-
-    }, 250);
+    // Focus management for accessibility
+    try { mainEl.focus({ preventScroll: true }); } catch (e) {}
+    try { announcePageChange(normalizedPath); } catch (e) {}
 }
 
 /**

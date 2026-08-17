@@ -81,6 +81,23 @@
     <div id="loader" class="preloader">
         <div class="spinner"></div>
     </div>
+    <script>
+        (function () {
+            function hideLoader() {
+                var l = document.getElementById('loader');
+                if (l) {
+                    l.classList.add('hidden');
+                    setTimeout(function () { l.style.display = 'none'; }, 400);
+                }
+            }
+            if (document.readyState === 'complete' || document.readyState === 'interactive') {
+                setTimeout(hideLoader, 300);
+            } else {
+                window.addEventListener('DOMContentLoaded', function () { setTimeout(hideLoader, 300); });
+            }
+            setTimeout(hideLoader, 800); // 800ms absolute fallback
+        })();
+    </script>
 
     <!-- Scroll Progress Bar -->
     <div class="scroll-progress"></div>
@@ -178,10 +195,11 @@
                 <div class="footer-col">
                     <h4 data-i18n="footer.resources">Resources</h4>
                     <ul>
+                        <li><a href="/farmer-award" data-i18n="nav.farmer_award"><i class="fas fa-trophy"></i> Farmer
+                                Award Application</a></li>
                         <li><a href="/reports" data-route data-i18n="nav.reports">Annual Reports</a></li>
                         <li><a href="/gallery" data-route data-i18n="nav.gallery">Photo Gallery</a></li>
                         <li><a href="/volunteer" data-route data-i18n="nav.volunteer">Volunteer</a></li>
-                        <li><a href="/faq" data-route data-i18n="nav.faq">FAQ</a></li>
                     </ul>
                 </div>
 
@@ -193,7 +211,8 @@
                                 Karnataka</span></li>
                         <li><i class="fas fa-envelope"></i> <a
                                 href="mailto:info@vvkfoundation.in">info@vvkfoundation.in</a></li>
-                        <li><i class="fas fa-phone-alt"></i> <a href="tel:+917676740862" data-i18n="footer.phone">+91 76767 40862</a></li>
+                        <li><i class="fas fa-phone-alt"></i> <a href="tel:+917676740862" data-i18n="footer.phone">+91
+                                76767 40862</a></li>
                     </ul>
                     <div class="footer-social">
                         <a href="https://www.facebook.com/VVKFoundation.in/" target="_blank" rel="noopener noreferrer"
@@ -233,14 +252,15 @@
     </button>
 
     <!-- Floating WhatsApp Button -->
-    <a href="https://whatsapp.com/channel/0029Vb7yFxOA2pLFnKvmLz0L" target="_blank" rel="noopener noreferrer"
-        class="floating-whatsapp" aria-label="Join our WhatsApp Channel">
+    <a href="https://api.whatsapp.com/send/?phone=917676740862&text=Hello+VVK+Foundation" target="_blank"
+        rel="noopener noreferrer" class="floating-whatsapp" aria-label="Connect with us">
         <i class="fab fa-whatsapp"></i>
     </a>
 
 
     <!-- Core App Logic (Type Module enables modern ES6 imports) -->
     <script type="module" src="/assets/js/app.js?v=1.2.1"></script>
+    <script src="/assets/js/pwa-install.js" defer></script>
 
 </body>
 

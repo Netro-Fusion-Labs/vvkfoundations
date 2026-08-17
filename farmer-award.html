@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="kn">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ಬಾಗಲಕೋಟೆ ಜಿಲ್ಲಾ ಮಟ್ಟದ ಅತ್ಯುತ್ತಮ ರೈತ ಮತ್ತು ರೈತ ಮಹಿಳೆಯ ಪ್ರಶಸ್ತಿ - ಅರ್ಜಿ ನಮೂನೆ | Bagalkot Best Farmer Award
+    Application</title>
+
+  <!-- PWA Manifest & Meta -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#15803d">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Google Fonts: Noto Sans Kannada & Inter -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Kannada:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Noto Sans Kannada"', 'Inter', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#f0fdf4',
+              100: '#dcfce7',
+              500: '#22c55e',
+              600: '#16a34a',
+              700: '#15803d',
+              800: '#166534',
+              900: '#14532d',
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-slate-100 text-slate-800 antialiased min-h-screen py-4 px-3 sm:py-8 sm:px-6 lg:px-8">
+
+  <div class="max-w-3xl mx-auto">
+
+    <!-- ════════ BRAND HEADER CARD (NO MEGA MENU / NO FOOTER) ════════ -->
+    <div class="bg-white rounded-2xl shadow-lg border-t-8 border-brand-700 p-5 sm:p-8 mb-6">
+      <div class="text-center">
+        <!-- VVK Foundation Branding -->
+        <div
+          class="inline-flex items-center gap-2 bg-brand-50 text-brand-800 text-xs sm:text-sm font-semibold px-4 py-1.5 rounded-full mb-3 border border-brand-200">
+          <i class="fas fa-award text-brand-600"></i>
+          <span>ವಿವಿಕೆ ಫೌಂಡೇಶನ್ ಕೃಷಿ ಕಲ್ಯಾಣ ಉಪಕ್ರಮ | VVK Foundation Agriculture Initiative</span>
+        </div>
+
+        <h1 class="text-xl sm:text-2xl lg:text-3xl font-bold text-slate-900 leading-snug tracking-tight mb-2">
+          ಬಾಗಲಕೋಟೆ ಜಿಲ್ಲಾ ಮಟ್ಟದ ಅತ್ಯುತ್ತಮ ರೈತ ಮತ್ತು ರೈತ ಮಹಿಳೆಯ ಪ್ರಶಸ್ತಿ
+        </h1>
+        <h2 class="text-xs sm:text-base text-slate-600 font-medium">
+          Bagalkot District-Level Best Farmer & Woman Farmer Award Application Form
+        </h2>
+        <p class="text-xs text-slate-500 mt-2">
+          * ಕಡ್ಡಾಯವಾಗಿ ನಮೂದಿಸಬೇಕಾದ ಕ್ಷೇತ್ರಗಳನ್ನು ಪೂರ್ಣಗೊಳಿಸಿ (Please fill in all mandatory fields marked with *)
+        </p>
+      </div>
+    </div>
+
+    <!-- ════════ HIDDEN IFRAME ════════ -->
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+
+    <!-- ════════ FORM CARD (RESPONSIVE DESIGN) ════════ -->
+    <form id="farmerAwardForm" class="space-y-6 sm:space-y-8" novalidate>
+
+      <!-- ════ SECTION 1: GENERAL INFORMATION ════ -->
+      <div class="bg-white rounded-2xl shadow-md p-5 sm:p-8 border border-slate-200">
+        <div class="flex items-center gap-3 pb-4 mb-6 border-b border-slate-100">
+          <span
+            class="w-8 h-8 rounded-full bg-brand-700 text-white flex items-center justify-center font-bold text-sm shrink-0">1</span>
+          <h3 class="text-base sm:text-lg font-bold text-slate-900">
+            ಸಾಮಾನ್ಯ ಮಾಹಿತಿ <span class="text-xs sm:text-sm font-normal text-slate-500">(General Information)</span>
+          </h3>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6">
+          <!-- Name of Farmer -->
+          <div>
+            <label for="farmerName" class="block text-xs sm:text-sm font-semibold text-slate-700 mb-1">
+              ರೈತರ ಹೆಸರು (Name of the Farmer) <span class="text-red-500">*</span>
+            </label>
+            <input type="text" id="farmerName" required placeholder="ಉದಾ: ರಮೇಶ್ ಬಸಪ್ಪ ಪಾಟೀಲ್"
+              class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition text-sm">
+            <p class="hidden text-xs text-red-500 mt-1" id="err-farmerName">ರೈತರ ಹೆಸರನ್ನು ನಮೂದಿಸಿ (Please enter farmer
+              name)</p>
+          </div>
+
+          <!-- Father's / Husband's Name -->
+          <div>
+            <label for="parentName" class="block text-xs sm:text-sm font-semibold text-slate-700 mb-1">
+              ತಂದೆ / ಗಂಡನ ಹೆಸರು (Father's / Husband's Name) <span class="text-red-500">*</span>
+            </label>
+            <input type="text" id="parentName" required placeholder="ಉದಾ: ಬಸಪ್ಪ ಪಾಟೀಲ್"
+              class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition text-sm">
+            <p class="hidden text-xs text-red-500 mt-1" id="err-parentName">ತಂದೆ/ಗಂಡನ ಹೆಸರನ್ನು ನಮೂದಿಸಿ (Please enter
+              father's/husband's name)</p>
+          </div>
+
+          <!-- Taluk Dropdown (MANDATORY FIELD with 9 Bagalkot Taluks) -->
+          <div>
+            <label for="taluk" class="block text-xs sm:text-sm font-semibold text-slate-700 mb-1">
+              ತಾಲೂಕು (Taluk - Bagalkot District) <span class="text-red-500">*</span>
+            </label>
+            <select id="taluk" required
+              class="w-full px-3.5 py-2.5 rounded-lg border-2 border-brand-600 bg-white focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition text-sm font-medium text-slate-800">
+              <option value="">-- ತಾಲೂಕು ಆಯ್ಕೆಮಾಡಿ (Select Mandatory Taluk) --</option>
+              <option value="ಬಾಗಲಕೋಟೆ (Bagalkot)">ಬಾಗಲಕೋಟೆ (Bagalkot)</option>
+              <option value="ಬಾದಾಮಿ (Badami)">ಬಾದಾಮಿ (Badami)</option>
+              <option value="ಬೀಳಗಿ (Bilagi)">ಬೀಳಗಿ (Bilagi)</option>
+              <option value="ಗುಳೇದಗುಡ್ಡ (Guledgudda)">ಗುಳೇದಗುಡ್ಡ (Guledgudda)</option>
+              <option value="ಹುನಗುಂದ (Hungund)">ಹುನಗುಂದ (Hungund)</option>
+              <option value="ಇಲಕಲ್ಲ (Ilkal)">ಇಲಕಲ್ಲ (Ilkal)</option>
+              <option value="ಜಮಖಂಡಿ (Jamkhandi)">ಜಮಖಂಡಿ (Jamkhandi)</option>
+              <option value="ಮುಧೋಳ (Mudhol)">ಮುಧೋಳ (Mudhol)</option>
+              <option value="ತರದಾಳ (Terdal)">ತರದಾಳ (Terdal)</option>
+            </select>
+            <p class="hidden text-xs text-red-500 mt-1" id="err-taluk">ದಯವಿಟ್ಟು ತಾಲೂಕನ್ನು ಆಯ್ಕೆಮಾಡಿ (Mandatory Taluk
+              required)</p>
+          </div>
+
+          <!-- Educational Qualification -->
+          <div>
+            <label for="education" class="block text-xs sm:text-sm font-semibold text-slate-700 mb-1">
+              ಶೈಕ್ಷಣಿಕ ಅರ್ಹತೆ (Educational Qualification)
+            </label>
+            <input type="text" id="education" placeholder="ಉದಾ: SSLC, PUC, ITI, Diploma, Degree, ಇತರ"
+              class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition text-sm">
+          </div>
+
+          <!-- Mobile Number -->
+          <div>
+            <label for="mobile" class="block text-xs sm:text-sm font-semibold text-slate-700 mb-1">
+              ಮೊಬೈಲ್ ಸಂಖ್ಯೆ (Mobile Number) <span class="text-red-500">*</span>
+            </label>
+            <input type="tel" id="mobile" required pattern="[0-9]{10}" maxlength="10"
+              placeholder="10-ಅಂಕಿಗಳ ಮೊಬೈಲ್ ಸಂಖ್ಯೆ (9876543210)"
+              class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition text-sm">
+            <p class="hidden text-xs text-red-500 mt-1" id="err-mobile">10-ಅಂಕಿಗಳ ಮೊಬೈಲ್ ಸಂಖ್ಯೆಯನ್ನು ನಮೂದಿಸಿ (Valid
+              10-digit mobile required)</p>
+          </div>
+
+          <!-- Postal Address -->
+          <div class="sm:col-span-2">
+            <label for="address" class="block text-xs sm:text-sm font-semibold text-slate-700 mb-1">
+              ಅಂಚೆ ವಿಳಾಸ (Postal Address - Village, Hobli, District, PIN) <span class="text-red-500">*</span>
+            </label>
+            <textarea id="address" rows="3" required placeholder="ಗ್ರಾಮ, ಹೋಬಳಿ, ಪಿನ್ ಕೋಡ್ ವಿವರಗಳು..."
+              class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition text-sm"></textarea>
+            <p class="hidden text-xs text-red-500 mt-1" id="err-address">ಅಂಚೆ ವಿಳಾಸವನ್ನು ಭರ್ತಿ ಮಾಡಿ (Please enter postal
+              address)</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ════ SECTION 2: LAND HOLDING DETAILS (MANDATORY) ════ -->
+      <div class="bg-white rounded-2xl shadow-md p-5 sm:p-8 border border-slate-200">
+        <div class="flex items-center gap-3 pb-4 mb-6 border-b border-slate-100">
+          <span
+            class="w-8 h-8 rounded-full bg-brand-700 text-white flex items-center justify-center font-bold text-sm shrink-0">2</span>
+          <h3 class="text-base sm:text-lg font-bold text-slate-900">
+            ಭೂ ಹಿಡುವಳಿಯ ವಿವರ <span class="text-xs sm:text-sm font-normal text-slate-500">(Land Holding Details in
+              Acres)</span> <span class="text-red-500">*</span>
+          </h3>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6">
+          <!-- Dry Land / Rainfed -->
+          <div>
+            <label for="dryLand" class="block text-xs sm:text-sm font-semibold text-slate-700 mb-1">
+              ಒಣ ಭೂಮಿ / ಖುಷಿ (Dry Land / Rainfed - Acres)
+            </label>
+            <input type="number" id="dryLand" min="0" step="0.1" placeholder="0.0"
+              class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition text-sm">
+          </div>
+
+          <!-- Irrigated Land -->
+          <div>
+            <label for="irrigatedLand" class="block text-xs sm:text-sm font-semibold text-slate-700 mb-1">
+              ನೀರಾವರಿ ಭೂಮಿ (Irrigated Land - Acres)
+            </label>
+            <input type="number" id="irrigatedLand" min="0" step="0.1" placeholder="0.0"
+              class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition text-sm">
+          </div>
+        </div>
+        <p class="hidden text-xs text-red-500 mt-2 font-medium" id="err-landHolding">ದಯವಿಟ್ಟು ಒಣ ಭೂಮಿ ಅಥವಾ ನೀರಾವರಿ ಭೂಮಿಯ
+          ವಿವರಗಳನ್ನು ನಮೂದಿಸಿ (Please enter dry land or irrigated land holding details in acres)</p>
+
+        <!-- CONDITIONAL IRRIGATION SOURCE CHECKBOXES (HIDDEN UNTIL IRRIGATED LAND > 0) -->
+        <div id="irrigationSourceSection" class="hidden mt-6 pt-4 border-t border-slate-200">
+          <label class="block text-xs sm:text-sm font-semibold text-slate-800 mb-3">
+            ನೀರಾವರಿ ಮೂಲ (Irrigation Source) <span class="text-red-500">*</span>:
+          </label>
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
+            <label
+              class="inline-flex items-center gap-2 p-3 bg-slate-50 rounded-lg border border-slate-200 cursor-pointer hover:bg-brand-50 transition">
+              <input type="checkbox" name="chkIrrigationSource" value="ಕೊಳವೆ ಬಾವಿ (Borewell)"
+                class="w-4 h-4 text-brand-600 rounded focus:ring-brand-500">
+              <span class="text-xs sm:text-sm font-medium text-slate-700">ಕೊಳವೆ ಬಾವಿ (Borewell)</span>
+            </label>
+
+            <label
+              class="inline-flex items-center gap-2 p-3 bg-slate-50 rounded-lg border border-slate-200 cursor-pointer hover:bg-brand-50 transition">
+              <input type="checkbox" name="chkIrrigationSource" value="ಕಾಲುವೆ (Canal)"
+                class="w-4 h-4 text-brand-600 rounded focus:ring-brand-500">
+              <span class="text-xs sm:text-sm font-medium text-slate-700">ಕಾಲುವೆ (Canal)</span>
+            </label>
+
+            <label
+              class="inline-flex items-center gap-2 p-3 bg-slate-50 rounded-lg border border-slate-200 cursor-pointer hover:bg-brand-50 transition">
+              <input type="checkbox" name="chkIrrigationSource" value="ನದಿ (River)"
+                class="w-4 h-4 text-brand-600 rounded focus:ring-brand-500">
+              <span class="text-xs sm:text-sm font-medium text-slate-700">ನದಿ (River)</span>
+            </label>
+
+            <div class="p-3 bg-slate-50 rounded-lg border border-slate-200 hover:bg-brand-50 transition">
+              <label class="inline-flex items-center gap-2 cursor-pointer">
+                <input type="checkbox" id="chkOtherIrrigation" name="chkIrrigationSource" value="Other"
+                  class="w-4 h-4 text-brand-600 rounded focus:ring-brand-500">
+                <span class="text-xs sm:text-sm font-medium text-slate-700">ಇತರೆ (Other)</span>
+              </label>
+              <input type="text" id="otherIrrigationText" placeholder="ಇತರೆ ನೀರಾವರಿ ಮೂಲ..."
+                class="hidden w-full mt-2 px-3 py-1.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand-500 outline-none text-xs">
+            </div>
+          </div>
+          <p class="hidden text-xs text-red-500 mt-2 font-medium" id="err-irrigationSource">ದಯವಿಟ್ಟು ಕನಿಷ್ಠ ಒಂದು ನೀರಾವರಿ ಮೂಲವನ್ನು ಆಯ್ಕೆಮಾಡಿ (Please select at least one irrigation source)</p>
+        </div>
+      </div>
+
+      <!-- ════ SECTION 3: ADOPTED AGRICULTURAL ACTIVITIES (MANDATORY) ════ -->
+      <div class="bg-white rounded-2xl shadow-md p-5 sm:p-8 border border-slate-200">
+        <div class="flex items-center gap-3 pb-4 mb-6 border-b border-slate-100">
+          <span
+            class="w-8 h-8 rounded-full bg-brand-700 text-white flex items-center justify-center font-bold text-sm shrink-0">3</span>
+          <h3 class="text-base sm:text-lg font-bold text-slate-900">
+            ಅಳವಡಿಸಿಕೊಂಡಿರುವ ಕೃಷಿ ಚಟುವಟಿಕೆಗಳು <span class="text-xs sm:text-sm font-normal text-slate-500">(Adopted
+              Agricultural Activities)</span> <span class="text-red-500">*</span>
+          </h3>
+        </div>
+        <p class="text-xs text-slate-500 mb-4">ನೀವು ಕೈಗೊಂಡಿರುವ ಎಲ್ಲಾ ಚಟುವಟಿಕೆಗಳನ್ನು ಆಯ್ಕೆಮಾಡಿ (Select all applicable
+          options):</p>
+
+        <!-- EXACTLY 8 ITEMS GRID (2-column desktop, 1-column mobile) -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <label
+            class="flex items-center gap-3 p-3.5 bg-slate-50 rounded-xl border border-slate-200 cursor-pointer hover:bg-brand-50 hover:border-brand-300 transition">
+            <input type="checkbox" name="chkAgriActivity" value="🌾 ಕೃಷಿ (Agriculture)"
+              class="w-4 h-4 text-brand-600 rounded focus:ring-brand-500">
+            <span class="text-xs sm:text-sm font-medium text-slate-800">🌾 ಕೃಷಿ (Agriculture)</span>
+          </label>
+
+          <label
+            class="flex items-center gap-3 p-3.5 bg-slate-50 rounded-xl border border-slate-200 cursor-pointer hover:bg-brand-50 hover:border-brand-300 transition">
+            <input type="checkbox" name="chkAgriActivity" value="🍎 ತೋಟಗಾರಿಕೆ (Horticulture)"
+              class="w-4 h-4 text-brand-600 rounded focus:ring-brand-500">
+            <span class="text-xs sm:text-sm font-medium text-slate-800">🍎 ತೋಟಗಾರಿಕೆ (Horticulture)</span>
+          </label>
+
+          <label
+            class="flex items-center gap-3 p-3.5 bg-slate-50 rounded-xl border border-slate-200 cursor-pointer hover:bg-brand-50 hover:border-brand-300 transition">
+            <input type="checkbox" name="chkAgriActivity" value="🐛 ರೇಷ್ಮೆ ಕೃಷಿ (Sericulture)"
+              class="w-4 h-4 text-brand-600 rounded focus:ring-brand-500">
+            <span class="text-xs sm:text-sm font-medium text-slate-800">🐛 ರೇಷ್ಮೆ ಕೃಷಿ (Sericulture)</span>
+          </label>
+
+          <label
+            class="flex items-center gap-3 p-3.5 bg-slate-50 rounded-xl border border-slate-200 cursor-pointer hover:bg-brand-50 hover:border-brand-300 transition">
+            <input type="checkbox" name="chkAgriActivity" value="🌲 ಅರಣ್ಯ ಕೃಷಿ (Forestry)"
+              class="w-4 h-4 text-brand-600 rounded focus:ring-brand-500">
+            <span class="text-xs sm:text-sm font-medium text-slate-800">🌲 ಅರಣ್ಯ ಕೃಷಿ (Forestry)</span>
+          </label>
+
+          <label
+            class="flex items-center gap-3 p-3.5 bg-slate-50 rounded-xl border border-slate-200 cursor-pointer hover:bg-brand-50 hover:border-brand-300 transition">
+            <input type="checkbox" name="chkAgriActivity" value="🥛 ಹೈನುಗಾರಿಕೆ (Dairying)"
+              class="w-4 h-4 text-brand-600 rounded focus:ring-brand-500">
+            <span class="text-xs sm:text-sm font-medium text-slate-800">🥛 ಹೈನುಗಾರಿಕೆ (Dairying)</span>
+          </label>
+
+          <label
+            class="flex items-center gap-3 p-3.5 bg-slate-50 rounded-xl border border-slate-200 cursor-pointer hover:bg-brand-50 hover:border-brand-300 transition">
+            <input type="checkbox" name="chkAgriActivity" value="🐐 ಕುರಿ/ಮೇಕೆ ಸಾಕಣೆ (Sheep/Goat Rearing)"
+              class="w-4 h-4 text-brand-600 rounded focus:ring-brand-500">
+            <span class="text-xs sm:text-sm font-medium text-slate-800">🐐 ಕುರಿ/ಮೇಕೆ ಸಾಕಣೆ (Sheep/Goat Rearing)</span>
+          </label>
+
+          <label
+            class="flex items-center gap-3 p-3.5 bg-slate-50 rounded-xl border border-slate-200 cursor-pointer hover:bg-brand-50 hover:border-brand-300 transition">
+            <input type="checkbox" name="chkAgriActivity" value="🐔 ಕೋಳಿ ಸಾಕಣೆ (Poultry)"
+              class="w-4 h-4 text-brand-600 rounded focus:ring-brand-500">
+            <span class="text-xs sm:text-sm font-medium text-slate-800">🐔 ಕೋಳಿ ಸಾಕಣೆ (Poultry)</span>
+          </label>
+
+          <!-- 8th Item: OTHER ACTIVITY -->
+          <div
+            class="p-3.5 bg-slate-50 rounded-xl border border-slate-200 hover:bg-brand-50 hover:border-brand-300 transition">
+            <label class="flex items-center gap-3 cursor-pointer">
+              <input type="checkbox" id="chkOtherActivity" name="chkAgriActivity" value="Other"
+                class="w-4 h-4 text-brand-600 rounded focus:ring-brand-500">
+              <span class="text-xs sm:text-sm font-medium text-slate-800">🔹 ಇತರೆ (Other Activities)</span>
+            </label>
+            <input type="text" id="otherActivityText" placeholder="ಇತರೆ ವಿವರ ನಮೂದಿಸಿ..."
+              class="hidden w-full mt-2 px-3 py-1.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand-500 outline-none text-xs">
+          </div>
+        </div>
+        <p class="hidden text-xs text-red-500 mt-2 font-medium" id="err-agriActivities">ದಯವಿಟ್ಟು ಕನಿಷ್ಠ ಒಂದು ಕೃಷಿ
+          ಚಟುವಟಿಕೆಯನ್ನು ಆಯ್ಕೆಮಾಡಿ (Please select at least one agricultural activity)</p>
+      </div>
+
+      <!-- ════ SECTION 4: INNOVATIONS / TECHNOLOGIES ADOPTED ════ -->
+      <div class="bg-white rounded-2xl shadow-md p-5 sm:p-8 border border-slate-200">
+        <div class="flex items-center gap-3 pb-4 mb-6 border-b border-slate-100">
+          <span
+            class="w-8 h-8 rounded-full bg-brand-700 text-white flex items-center justify-center font-bold text-sm shrink-0">4</span>
+          <h3 class="text-base sm:text-lg font-bold text-slate-900">
+            🚜 ನಾವೀನ್ಯತೆಗಳು / ತಂತ್ರಜ್ಞಾನಗಳು ಅಳವಡಿಕೆ <span class="text-xs sm:text-sm font-normal text-slate-500">(Innovations / Technologies Adopted)</span>
+          </h3>
+        </div>
+
+        <div class="space-y-5">
+          <!-- Innovation / Technology Adopted -->
+          <div>
+            <label for="innovationName" class="block text-xs sm:text-sm font-semibold text-slate-700 mb-1">
+              ನಾವೀನ್ಯತೆ / ತಂತ್ರಜ್ಞಾನದ ಹೆಸರು (Innovation / Technology Adopted) <span class="text-red-500">*</span>
+            </label>
+            <input type="text" id="innovationName" required placeholder="ಉದಾ: ಸೂಕ್ಷ್ಮ ನೀರಾವರಿ, ಡ್ರೋನ್ ಸಿಂಪಡಣೆ, ಯಾಂತ್ರೀಕೃತ ಕೃಷಿ, ಇತ್ಯಾದಿ"
+              class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition text-sm">
+            <p class="hidden text-xs text-red-500 mt-1" id="err-innovationName">ದಯವಿಟ್ಟು ನಾವೀನ್ಯತೆ/ತಂತ್ರಜ್ಞಾನದ ಹೆಸರನ್ನು ನಮೂದಿಸಿ (Please enter innovation/technology name)</p>
+          </div>
+
+          <!-- Purpose / Problem Addressed -->
+          <div>
+            <label for="innovationPurpose" class="block text-xs sm:text-sm font-semibold text-slate-700 mb-1">
+              ಉದ್ದೇಶ / ಪರಿಹರಿಸಿದ ಸಮಸ್ಯೆ (Purpose / Problem Addressed) <span class="text-red-500">*</span>
+            </label>
+            <textarea id="innovationPurpose" rows="3" required placeholder="ತಂತ್ರಜ್ಞಾನವನ್ನು ಅಳವಡಿಸಿಕೊಂಡ ಉದ್ದೇಶ ಅಥವಾ ಎದುರಿಸಿದ ಸಮಸ್ಯೆಯನ್ನು ವಿವರಿಸಿ..."
+              class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition text-sm"></textarea>
+            <p class="hidden text-xs text-red-500 mt-1" id="err-innovationPurpose">ದಯವಿಟ್ಟು ಉದ್ದೇಶ/ಪರಿಹರಿಸಿದ ಸಮಸ್ಯೆಯನ್ನು ವಿವರಿಸಿ (Please describe purpose/problem addressed)</p>
+          </div>
+
+          <!-- How it was Implemented -->
+          <div>
+            <label for="innovationImplementation" class="block text-xs sm:text-sm font-semibold text-slate-700 mb-1">
+              ಅನುಷ್ಠಾನಗೊಳಿಸಿದ ರೀತಿ (How it was Implemented) <span class="text-red-500">*</span>
+            </label>
+            <textarea id="innovationImplementation" rows="3" required placeholder="ಈ ನಾವೀನ್ಯತೆ ಅಥವಾ ತಂತ್ರಜ್ಞಾನವನ್ನು ನಿಮ್ಮ ಜಮೀನಿನಲ್ಲಿ ಹೇಗೆ ಅನುಷ್ಠಾನಗೊಳಿಸಿದಿರಿ..."
+              class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition text-sm"></textarea>
+            <p class="hidden text-xs text-red-500 mt-1" id="err-innovationImplementation">ದಯವಿಟ್ಟು ಅನುಷ್ಠಾನಗೊಳಿಸಿದ ರೀತಿಯನ್ನು ವಿವರಿಸಿ (Please describe how it was implemented)</p>
+          </div>
+
+          <!-- Benefits / Results Achieved -->
+          <div>
+            <label for="innovationBenefits" class="block text-xs sm:text-sm font-semibold text-slate-700 mb-1">
+              ಪ್ರಯೋಜನಗಳು / ಸಾಧಿಸಿದ ಫಲಿತಾಂಶಗಳು (Benefits / Results Achieved) <span class="text-red-500">*</span>
+            </label>
+            <textarea id="innovationBenefits" rows="3" required placeholder="ಉತ್ಪಾದನೆ ಹೆಚ್ಚಳ, ವೆಚ್ಚ ಕಡಿತ, ನೀರು ಉಳಿತಾಯ ಇತ್ಯಾದಿ ಪಡೆದ ಫಲಿತಾಂಶಗಳು..."
+              class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition text-sm"></textarea>
+            <p class="hidden text-xs text-red-500 mt-1" id="err-innovationBenefits">ದಯವಿಟ್ಟು ಲಭಿಸಿದ ಪ್ರಯೋಜನಗಳನ್ನು/ಫಲಿತಾಂಶಗಳನ್ನು ವಿವರಿಸಿ (Please describe benefits/results achieved)</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ════ SECTION 5: PRACTICES ADOPTED ════ -->
+      <div class="bg-white rounded-2xl shadow-md p-5 sm:p-8 border border-slate-200">
+        <div class="flex items-center gap-3 pb-4 mb-6 border-b border-slate-100">
+          <span
+            class="w-8 h-8 rounded-full bg-brand-700 text-white flex items-center justify-center font-bold text-sm shrink-0">5</span>
+          <h3 class="text-base sm:text-lg font-bold text-slate-900">
+            🌾 ಅನುಸರಿಸುತ್ತಿರುವ ಕೃಷಿ ಪದ್ಧತಿಗಳು <span class="text-xs sm:text-sm font-normal text-slate-500">(Practices Adopted)</span> <span class="text-red-500">*</span>
+          </h3>
+        </div>
+        <p class="text-xs text-slate-500 mb-4">ಅನ್ವಯವಾಗುವ ಎಲ್ಲಾ ಕೃಷಿ ಪದ್ಧತಿಗಳನ್ನು ಆಯ್ಕೆಮಾಡಿ (Select all that apply):</p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <label
+            class="flex items-center gap-3 p-3.5 bg-slate-50 rounded-xl border border-slate-200 cursor-pointer hover:bg-brand-50 hover:border-brand-300 transition">
+            <input type="checkbox" name="chkPracticesAdopted" value="ಸಾವಯವ ಕೃಷಿ (Organic Farming)"
+              class="w-4 h-4 text-brand-600 rounded focus:ring-brand-500">
+            <span class="text-xs sm:text-sm font-medium text-slate-800">🌱 ಸಾವಯವ ಕೃಷಿ (Organic Farming)</span>
+          </label>
+
+          <label
+            class="flex items-center gap-3 p-3.5 bg-slate-50 rounded-xl border border-slate-200 cursor-pointer hover:bg-brand-50 hover:border-brand-300 transition">
+            <input type="checkbox" name="chkPracticesAdopted" value="ಸಮಗ್ರ ಪೀಡೆ ನಿರ್ವಹಣೆ (IPM - Integrated Pest Management)"
+              class="w-4 h-4 text-brand-600 rounded focus:ring-brand-500">
+            <span class="text-xs sm:text-sm font-medium text-slate-800">🛡️ ಸಮಗ್ರ ಪೀಡೆ ನಿರ್ವಹಣೆ (IPM - Integrated Pest Management)</span>
+          </label>
+
+          <label
+            class="flex items-center gap-3 p-3.5 bg-slate-50 rounded-xl border border-slate-200 cursor-pointer hover:bg-brand-50 hover:border-brand-300 transition">
+            <input type="checkbox" name="chkPracticesAdopted" value="ಸಾಂಪ್ರದಾಯಿಕ ಕೃಷಿ (Conventional Farming)"
+              class="w-4 h-4 text-brand-600 rounded focus:ring-brand-500">
+            <span class="text-xs sm:text-sm font-medium text-slate-800">🧑‍🌾 ಸಾಂಪ್ರದಾಯಿಕ ಕೃಷಿ (Conventional Farming)</span>
+          </label>
+
+          <label
+            class="flex items-center gap-3 p-3.5 bg-slate-50 rounded-xl border border-slate-200 cursor-pointer hover:bg-brand-50 hover:border-brand-300 transition">
+            <input type="checkbox" name="chkPracticesAdopted" value="ಬೆಳೆ ಪರಿವರ್ತನೆ (Crop Rotation)"
+              class="w-4 h-4 text-brand-600 rounded focus:ring-brand-500">
+            <span class="text-xs sm:text-sm font-medium text-slate-800">🔄 ಬೆಳೆ ಪರಿವರ್ತನೆ (Crop Rotation)</span>
+          </label>
+
+          <label
+            class="flex items-center gap-3 p-3.5 bg-slate-50 rounded-xl border border-slate-200 cursor-pointer hover:bg-brand-50 hover:border-brand-300 transition">
+            <input type="checkbox" name="chkPracticesAdopted" value="ಹನಿ ಹಾಗೂ ಸಮರ್ಥ ನೀರಾವರಿ ಪದ್ಧತಿ (Drip and Efficient Irrigation)"
+              class="w-4 h-4 text-brand-600 rounded focus:ring-brand-500">
+            <span class="text-xs sm:text-sm font-medium text-slate-800">💧 ಹನಿ ಹಾಗೂ ಸಮರ್ಥ ನೀರಾವರಿ ಪದ್ಧತಿ (Drip and Efficient Irrigation)</span>
+          </label>
+
+          <!-- Conditional OTHER PRACTICE -->
+          <div
+            class="p-3.5 bg-slate-50 rounded-xl border border-slate-200 hover:bg-brand-50 hover:border-brand-300 transition">
+            <label class="flex items-center gap-3 cursor-pointer">
+              <input type="checkbox" id="chkOtherPractice" name="chkPracticesAdopted" value="Other"
+                class="w-4 h-4 text-brand-600 rounded focus:ring-brand-500">
+              <span class="text-xs sm:text-sm font-medium text-slate-800">🔹 ಇತರೆ (Other)</span>
+            </label>
+            <input type="text" id="otherPracticeText" placeholder="ಇತರೆ ಕೃಷಿ ಪದ್ಧತಿ ನಮೂದಿಸಿ..."
+              class="hidden w-full mt-2 px-3 py-1.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand-500 outline-none text-xs">
+          </div>
+        </div>
+        <p class="hidden text-xs text-red-500 mt-2 font-medium" id="err-practicesAdopted">ದಯವಿಟ್ಟು ಕನಿಷ್ಠ ಒಂದು ಕೃಷಿ ಪದ್ಧತಿಯನ್ನು ಆಯ್ಕೆಮಾಡಿ (Please select at least one practice adopted)</p>
+      </div>
+
+      <!-- ════ SECTION 6: KEY ACHIEVEMENTS ════ -->
+      <div class="bg-white rounded-2xl shadow-md p-5 sm:p-8 border border-slate-200">
+        <div class="flex items-center gap-3 pb-4 mb-6 border-b border-slate-100">
+          <span
+            class="w-8 h-8 rounded-full bg-brand-700 text-white flex items-center justify-center font-bold text-sm shrink-0">6</span>
+          <h3 class="text-base sm:text-lg font-bold text-slate-900">
+            🏆 ಪ್ರಮುಖ ಸಾಧನೆಗಳು <span class="text-xs sm:text-sm font-normal text-slate-500">(Key Achievements)</span> <span class="text-red-500">*</span>
+          </h3>
+        </div>
+
+        <div>
+          <label for="keyAchievements" class="block text-xs sm:text-sm font-semibold text-slate-700 mb-1">
+            ವಿವರಗಳನ್ನು ನಮೂದಿಸಿ (Enter details of achievements) <span class="text-red-500">*</span>
+          </label>
+          <textarea id="keyAchievements" rows="4" required placeholder="ನಿಮ್ಮ ಕೃಷಿ ಸಾಧನೆಗಳು, ಪ್ರಶಸ್ತಿಗಳು, ಗರಿಷ್ಠ ಇಳುವರಿ ದಾಖಲೆಗಳು, ಮಾರುಕಟ್ಟೆ ನಾವೀನ್ಯತೆ ಇತ್ಯಾದಿ ವಿವರಗಳನ್ನು ನಮೂದಿಸಿ..."
+            class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition text-sm"></textarea>
+          <p class="hidden text-xs text-red-500 mt-1" id="err-keyAchievements">ದಯವಿಟ್ಟು ಪ್ರಮುಖ ಸಾಧನೆಗಳ ವಿವರವನ್ನು ನಮೂದಿಸಿ (Please enter details of achievements)</p>
+        </div>
+      </div>
+
+      <!-- ════ SECTION 7: DECLARATION & SUBMISSION ════ -->
+      <div class="bg-white rounded-2xl shadow-md p-5 sm:p-8 border border-slate-200">
+        <div class="flex items-center gap-3 pb-4 mb-4 border-b border-slate-100">
+          <span
+            class="w-8 h-8 rounded-full bg-brand-700 text-white flex items-center justify-center font-bold text-sm shrink-0">7</span>
+          <h3 class="text-base sm:text-lg font-bold text-slate-900">
+            ಘೋಷಣೆ & ಸಲ್ಲಿಕೆ <span class="text-xs sm:text-sm font-normal text-slate-500">(Declaration &
+              Submission)</span>
+          </h3>
+        </div>
+
+        <div class="mb-6">
+          <label class="flex items-start gap-3 cursor-pointer">
+            <input type="checkbox" id="declaration" required
+              class="mt-1 w-4 h-4 text-brand-600 rounded focus:ring-brand-500">
+            <span class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+              <strong>ಘೋಷಣೆ (Declaration):</strong> ಮೇಲೆ ನೀಡಿರುವ ಎಲ್ಲಾ ಮಾಹಿತಿಗಳು ನನ್ನ ಜ್ಞಾನಕ್ಕೆ ತಿಳಿದಂತೆ ಸತ್ಯ ಮತ್ತು
+              ಸರಿಯಾಗಿದೆ ಎಂದು ಈ ಮೂಲಕ ಘೋಷಿಸುತ್ತೇನೆ. (I hereby declare that the information provided above is true and
+              correct to the best of my knowledge.) <span class="text-red-500">*</span>
+            </span>
+          </label>
+          <p class="hidden text-xs text-red-500 mt-1" id="err-declaration">ದಯವಿಟ್ಟು ಘೋಷಣೆಯನ್ನು ಒಪ್ಪಿಕೊಳ್ಳಿ (Please
+            accept the declaration)</p>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" id="btnSubmit"
+          class="w-full bg-brand-700 hover:bg-brand-800 text-white font-bold py-3.5 px-6 rounded-xl shadow-lg hover:shadow-xl transition transform active:scale-95 flex items-center justify-center gap-2 text-base">
+          <i class="fas fa-paper-plane"></i>
+          <span>ಅರ್ಜಿ ಸಲ್ಲಿಸಿ (Submit Application)</span>
+        </button>
+      </div>
+
+    </form>
+
+    <!-- ════ SUCCESS RECEIPT CARD ════ -->
+    <div id="successCard"
+      class="hidden bg-white rounded-2xl shadow-2xl p-6 sm:p-8 border-t-8 border-brand-600 text-center">
+      <div
+        class="w-16 h-16 bg-brand-100 text-brand-700 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl">
+        <i class="fas fa-trophy"></i>
+      </div>
+      <h3 class="text-xl sm:text-2xl font-bold text-slate-900 mb-1">ಅರ್ಜಿ ಯಶಸ್ವಿಯಾಗಿ ಸಲ್ಲಿಕೆಯಾಗಿದೆ!</h3>
+      <p class="text-slate-500 text-xs sm:text-sm mb-6">Best Farmer Award Application Submitted Successfully!</p>
+
+      <div class="bg-slate-50 rounded-xl p-4 sm:p-5 border border-slate-200 text-left space-y-3 mb-6">
+        <div class="flex justify-between items-center pb-2 border-b border-slate-200 text-xs sm:text-sm">
+          <span class="text-slate-600">ಅರ್ಜಿ ಸಂಖ್ಯೆ (Application No):</span>
+          <strong id="recAppId" class="text-brand-700 font-bold">BGL-FA-2026-0000</strong>
+        </div>
+        <div class="flex justify-between items-center pb-2 border-b border-slate-200 text-xs sm:text-sm">
+          <span class="text-slate-600">ರೈತರ ಹೆಸರು (Farmer Name):</span>
+          <strong id="recFarmerName" class="text-slate-900">--</strong>
+        </div>
+        <div class="flex justify-between items-center pb-2 border-b border-slate-200 text-xs sm:text-sm">
+          <span class="text-slate-600">ತಾಲೂಕು (Taluk):</span>
+          <strong id="recTaluk" class="text-slate-900">--</strong>
+        </div>
+        <div class="flex justify-between items-center text-xs sm:text-sm">
+          <span class="text-slate-600">ಮೊಬೈಲ್ ಸಂಖ್ಯೆ (Mobile):</span>
+          <strong id="recMobile" class="text-slate-900">--</strong>
+        </div>
+      </div>
+
+      <!-- Confirmation CTAs matching user design -->
+      <div class="space-y-3.5 mb-6">
+        <!-- 1. Join Official VVK WhatsApp Channel -->
+        <a href="https://www.whatsapp.com/channel/0029Vb7yFxOA2pLFnKvmLz0L" target="_blank" rel="noopener noreferrer"
+          class="w-full bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold py-3.5 px-6 rounded-full shadow-md hover:shadow-lg transition transform active:scale-95 flex items-center justify-center gap-2 text-sm sm:text-base">
+          <i class="fab fa-whatsapp text-xl"></i>
+          <span>Join our WhatsApp Channel</span>
+        </a>
+
+        <!-- 2. Register Another Farmer -->
+        <button type="button" id="btnSubmitAnother"
+          class="w-full bg-white hover:bg-slate-50 text-[#003366] border-2 border-[#003366] font-bold py-3.5 px-6 rounded-full shadow-sm hover:shadow transition transform active:scale-95 flex items-center justify-center gap-2 text-sm sm:text-base">
+          <i class="fas fa-plus-circle text-base"></i>
+          <span>Register Another Farmer</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Clean Standalone Footer (No site mega menu/footer clutter) -->
+    <div class="text-center mt-8 text-xs text-slate-400">
+      &copy; 2026 VVK Foundation. Bagalkot Agriculture Welfare Division.
+    </div>
+
+  </div>
+
+  <script>
+    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyQLH-586PMfodeOu7BE3PMmmenbgPD_MivPSEyrPPgNmIwqg3ZQq9LqHXbszoInys0yw/exec';
+
+    const form = document.getElementById('farmerAwardForm');
+    const chkOther = document.getElementById('chkOtherActivity');
+    const txtOther = document.getElementById('otherActivityText');
+    const chkOtherPractice = document.getElementById('chkOtherPractice');
+    const txtOtherPractice = document.getElementById('otherPracticeText');
+    const chkOtherIrrigation = document.getElementById('chkOtherIrrigation');
+    const txtOtherIrrigation = document.getElementById('otherIrrigationText');
+    const successCard = document.getElementById('successCard');
+    const btnSubmitAnother = document.getElementById('btnSubmitAnother');
+    const irrigatedInput = document.getElementById('irrigatedLand');
+    const irrigationSection = document.getElementById('irrigationSourceSection');
+
+    // Conditional Irrigation Source Section (Shown ONLY when Irrigated Land > 0)
+    if (irrigatedInput && irrigationSection) {
+      const toggleIrrigation = () => {
+        const val = parseFloat(irrigatedInput.value) || 0;
+        if (val > 0) {
+          irrigationSection.classList.remove('hidden');
+        } else {
+          irrigationSection.classList.add('hidden');
+          document.querySelectorAll('input[name="chkIrrigationSource"]').forEach(cb => cb.checked = false);
+          if (txtOtherIrrigation) {
+            txtOtherIrrigation.classList.add('hidden');
+            txtOtherIrrigation.value = '';
+          }
+          const errIrr = document.getElementById('err-irrigationSource');
+          if (errIrr) errIrr.classList.add('hidden');
+        }
+      };
+      irrigatedInput.addEventListener('input', toggleIrrigation);
+      irrigatedInput.addEventListener('change', toggleIrrigation);
+    }
+
+    // Conditional Other Irrigation text input toggle
+    if (chkOtherIrrigation && txtOtherIrrigation) {
+      chkOtherIrrigation.addEventListener('change', () => {
+        if (chkOtherIrrigation.checked) {
+          txtOtherIrrigation.classList.remove('hidden');
+          txtOtherIrrigation.focus();
+        } else {
+          txtOtherIrrigation.classList.add('hidden');
+          txtOtherIrrigation.value = '';
+        }
+      });
+    }
+
+    // Conditional Other Activity text input toggle
+    if (chkOther && txtOther) {
+      chkOther.addEventListener('change', () => {
+        if (chkOther.checked) {
+          txtOther.classList.remove('hidden');
+          txtOther.focus();
+        } else {
+          txtOther.classList.add('hidden');
+          txtOther.value = '';
+        }
+      });
+    }
+
+    // Conditional Other Practice text input toggle
+    if (chkOtherPractice && txtOtherPractice) {
+      chkOtherPractice.addEventListener('change', () => {
+        if (chkOtherPractice.checked) {
+          txtOtherPractice.classList.remove('hidden');
+          txtOtherPractice.focus();
+        } else {
+          txtOtherPractice.classList.add('hidden');
+          txtOtherPractice.value = '';
+        }
+      });
+    }
+
+    // Submit Another Handler
+    if (btnSubmitAnother) {
+      btnSubmitAnother.addEventListener('click', () => {
+        successCard.classList.add('hidden');
+        form.reset();
+        if (txtOther) txtOther.classList.add('hidden');
+        if (txtOtherPractice) txtOtherPractice.classList.add('hidden');
+        if (txtOtherIrrigation) txtOtherIrrigation.classList.add('hidden');
+        if (irrigationSection) irrigationSection.classList.add('hidden');
+        form.classList.remove('hidden');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
+
+    // Form Validation & Submission
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      let isValid = true;
+      const farmerName = document.getElementById('farmerName');
+      const parentName = document.getElementById('parentName');
+      const taluk = document.getElementById('taluk');
+      const mobile = document.getElementById('mobile');
+      const address = document.getElementById('address');
+      const declaration = document.getElementById('declaration');
+      const dryLand = document.getElementById('dryLand');
+      const irrigatedLand = document.getElementById('irrigatedLand');
+      const innovationName = document.getElementById('innovationName');
+      const innovationPurpose = document.getElementById('innovationPurpose');
+      const innovationImplementation = document.getElementById('innovationImplementation');
+      const innovationBenefits = document.getElementById('innovationBenefits');
+      const keyAchievements = document.getElementById('keyAchievements');
+
+      const checkField = (field, errId) => {
+        const errEl = document.getElementById(errId);
+        if (!field || !field.value.trim() || (field.type === 'checkbox' && !field.checked)) {
+          if (field) field.classList.add('border-red-500');
+          if (errEl) errEl.classList.remove('hidden');
+          isValid = false;
+        } else {
+          if (field) field.classList.remove('border-red-500');
+          if (errEl) errEl.classList.add('hidden');
+        }
+      };
+
+      checkField(farmerName, 'err-farmerName');
+      checkField(parentName, 'err-parentName');
+      checkField(taluk, 'err-taluk');
+      checkField(mobile, 'err-mobile');
+      checkField(address, 'err-address');
+      checkField(innovationName, 'err-innovationName');
+      checkField(innovationPurpose, 'err-innovationPurpose');
+      checkField(innovationImplementation, 'err-innovationImplementation');
+      checkField(innovationBenefits, 'err-innovationBenefits');
+      checkField(keyAchievements, 'err-keyAchievements');
+      checkField(declaration, 'err-declaration');
+
+      // MANDATORY CHECK 1: Land Holding Details
+      const dryVal = parseFloat(dryLand?.value) || 0;
+      const irrVal = parseFloat(irrigatedLand?.value) || 0;
+      const errLand = document.getElementById('err-landHolding');
+      if (dryVal <= 0 && irrVal <= 0) {
+        if (dryLand) dryLand.classList.add('border-red-500');
+        if (irrigatedLand) irrigatedLand.classList.add('border-red-500');
+        if (errLand) errLand.classList.remove('hidden');
+        isValid = false;
+      } else {
+        if (dryLand) dryLand.classList.remove('border-red-500');
+        if (irrigatedLand) irrigatedLand.classList.remove('border-red-500');
+        if (errLand) errLand.classList.add('hidden');
+      }
+
+      // MANDATORY CHECK 2: Adopted Agricultural Activities
+      const selectedActivities = Array.from(document.querySelectorAll('input[name="chkAgriActivity"]:checked')).map(cb => {
+        if (cb.value === 'Other' && txtOther && txtOther.value.trim()) {
+          return `Other: ${txtOther.value.trim()}`;
+        }
+        return cb.value;
+      });
+      const errAgri = document.getElementById('err-agriActivities');
+      if (selectedActivities.length === 0) {
+        if (errAgri) errAgri.classList.remove('hidden');
+        isValid = false;
+      } else {
+        if (errAgri) errAgri.classList.add('hidden');
+      }
+
+      // MANDATORY CHECK 3: Practices Adopted
+      const selectedPractices = Array.from(document.querySelectorAll('input[name="chkPracticesAdopted"]:checked')).map(cb => {
+        if (cb.value === 'Other' && txtOtherPractice && txtOtherPractice.value.trim()) {
+          return `Other: ${txtOtherPractice.value.trim()}`;
+        }
+        return cb.value;
+      });
+      const errPractices = document.getElementById('err-practicesAdopted');
+      if (selectedPractices.length === 0) {
+        if (errPractices) errPractices.classList.remove('hidden');
+        isValid = false;
+      } else {
+        if (errPractices) errPractices.classList.add('hidden');
+      }
+
+      // MANDATORY CHECK 4: Irrigation Source (Mandatory IF Irrigated Land > 0)
+      const selectedIrrigation = Array.from(document.querySelectorAll('input[name="chkIrrigationSource"]:checked')).map(cb => {
+        if ((cb.value === 'Other' || cb.value === 'ಇತರೆ (Other)') && txtOtherIrrigation && txtOtherIrrigation.value.trim()) {
+          return `Other: ${txtOtherIrrigation.value.trim()}`;
+        }
+        return cb.value;
+      });
+      const errIrrigation = document.getElementById('err-irrigationSource');
+      if (irrVal > 0 && selectedIrrigation.length === 0) {
+        if (errIrrigation) errIrrigation.classList.remove('hidden');
+        isValid = false;
+      } else {
+        if (errIrrigation) errIrrigation.classList.add('hidden');
+      }
+
+      if (!isValid) {
+        const firstError = document.querySelector('.border-red-500, #err-agriActivities:not(.hidden), #err-practicesAdopted:not(.hidden), #err-landHolding:not(.hidden), #err-irrigationSource:not(.hidden)');
+        if (firstError) {
+          firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+        return;
+      }
+
+      const appId = 'BGL-FA-2026-' + Math.floor(1000 + Math.random() * 9000);
+      const edu = document.getElementById('education')?.value.trim() || 'N/A';
+
+      const payload = {
+        formType: 'Farmer Award Application',
+        timestamp: new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' }),
+        memberId: appId,
+        farmerName: farmerName.value.trim(),
+        parentName: parentName.value.trim(),
+        taluk: taluk.value,
+        mobile: mobile.value.trim(),
+        address: address.value.trim(),
+        education: edu,
+        dryLand: dryLand?.value || '0',
+        irrigatedLand: irrigatedLand?.value || '0',
+        irrigationSource: selectedIrrigation.join(', ') || 'N/A',
+        activities: selectedActivities.join(', ') || 'Agriculture',
+        innovationName: innovationName?.value.trim() || 'N/A',
+        innovationPurpose: innovationPurpose?.value.trim() || 'N/A',
+        innovationImplementation: innovationImplementation?.value.trim() || 'N/A',
+        innovationBenefits: innovationBenefits?.value.trim() || 'N/A',
+        practicesAdopted: selectedPractices.join(', ') || 'N/A',
+        keyAchievements: keyAchievements?.value.trim() || 'N/A'
+      };
+
+      const btnSubmit = document.getElementById('btnSubmit');
+      if (btnSubmit) {
+        btnSubmit.disabled = true;
+        btnSubmit.innerHTML = `<i class="fas fa-spinner fa-spin"></i> <span>ಸಲ್ಲಿಸಲಾಗುತ್ತಿದೆ (Submitting...)</span>`;
+      }
+
+      // Single POST Request to Google Apps Script Web App
+      try {
+        await fetch(GOOGLE_SCRIPT_URL, {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+          body: JSON.stringify(payload)
+        });
+      } catch (err) {
+        console.warn('Fetch POST warning:', err);
+      }
+
+      // -------------------------------------------------------------
+      // LAYER 3: Local Storage Backup
+      // -------------------------------------------------------------
+      try {
+        const existing = JSON.parse(localStorage.getItem('vvk_farmer_award_applications') || '[]');
+        existing.push(payload);
+        localStorage.setItem('vvk_farmer_award_applications', JSON.stringify(existing));
+      } catch (err) { }
+
+      // Reset Submit Button & Show Receipt Card
+      if (btnSubmit) {
+        btnSubmit.disabled = false;
+        btnSubmit.innerHTML = `<i class="fas fa-paper-plane"></i> <span>ಅರ್ಜಿ ಸಲ್ಲಿಸಿ (Submit Application)</span>`;
+      }
+
+      form.classList.add('hidden');
+      const recAppId = document.getElementById('recAppId');
+      const recFarmerName = document.getElementById('recFarmerName');
+      const recTaluk = document.getElementById('recTaluk');
+      const recMobile = document.getElementById('recMobile');
+
+      if (recAppId) recAppId.textContent = appId;
+      if (recFarmerName) recFarmerName.textContent = farmerName.value.trim();
+      if (recTaluk) recTaluk.textContent = taluk.value;
+      if (recMobile) recMobile.textContent = mobile.value.trim();
+
+      if (successCard) {
+        successCard.classList.remove('hidden');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    });
+  </script>
+  <script src="assets/js/pwa-install.js" defer></script>
+</body>
+
+</html>

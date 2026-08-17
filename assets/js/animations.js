@@ -28,8 +28,16 @@ export function reinitAnimations() {
 
 /* ── Intersection Observer for Scroll Reveals ────────────── */
 function setupIntersectionObserver() {
-    const reveals = document.querySelectorAll('.reveal:not(.active)');
+    const reveals = document.querySelectorAll('.reveal');
     if (reveals.length === 0) return;
+
+    // Immediately reveal elements near or in the viewport
+    reveals.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight + 150) {
+            el.classList.add('active');
+        }
+    });
 
     if ('IntersectionObserver' in window) {
         const observer = new IntersectionObserver((entries) => {
@@ -40,15 +48,24 @@ function setupIntersectionObserver() {
                 }
             });
         }, {
-            threshold: 0.08,
-            rootMargin: '0px 0px -40px 0px'
+            threshold: 0.05,
+            rootMargin: '0px 0px 50px 0px'
         });
 
-        reveals.forEach(el => observer.observe(el));
+        reveals.forEach(el => {
+            if (!el.classList.contains('active')) {
+                observer.observe(el);
+            }
+        });
     } else {
         // Fallback: show everything immediately
         reveals.forEach(el => el.classList.add('active'));
     }
+
+    // Safety fallback: reveal all elements after 250ms
+    setTimeout(() => {
+        document.querySelectorAll('.reveal:not(.active)').forEach(el => el.classList.add('active'));
+    }, 250);
 }
 
 /* ── Magnetic Button Hover Effect ────────────────────────── */
