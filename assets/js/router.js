@@ -4,28 +4,28 @@
  * page transitions, focus management, and ARIA announcements.
  */
 
-import { renderHome } from './pages/home.js?v=2.0.4';
-import { renderAbout } from './pages/about.js?v=2.0.4';
-import { renderFounder } from './pages/founder.js?v=2.0.1';
-import { renderTeam, initAdvisorSpotlight } from './pages/team.js?v=2.0.1';
-import { renderInitiatives, initInitiativesPage } from './pages/initiatives.js?v=2.0.2';
-import { renderGallery, initGalleryFilters } from './pages/gallery.js?v=2.0.1';
-import { renderContact, initContactForm } from './pages/contact.js?v=2.0.1';
-import { renderReports } from './pages/reports.js?v=2.0.1';
-import { renderNews, initNewsFilters } from './pages/news.js?v=2.0.1';
-import { renderVolunteer, initVolunteerForm } from './pages/volunteer.js?v=2.0.2';
-import { renderFaq, initFaqAccordion } from './pages/faq.js?v=2.0.1';
-import { renderPrivacy } from './pages/privacy.js?v=2.0.1';
-import { renderTerms } from './pages/terms.js?v=2.0.1';
-import { renderJoin, initJoinForm } from './pages/join.js?v=2.0.1';
-import { renderFarmerAward, initFarmerAwardForm } from './pages/farmer-award.js?v=2.0.1';
-import { renderNotFound } from './pages/notfound.js?v=2.0.1';
+import { renderHome } from './pages/home.js?v=2.1.0';
+import { renderAbout } from './pages/about.js?v=2.1.0';
+import { renderFounder } from './pages/founder.js?v=2.1.0';
+import { renderTeam, initAdvisorSpotlight } from './pages/team.js?v=2.1.0';
+import { renderInitiatives, initInitiativesPage } from './pages/initiatives.js?v=2.1.0';
+import { renderGallery, initGalleryFilters } from './pages/gallery.js?v=2.1.0';
+import { renderContact, initContactForm } from './pages/contact.js?v=2.1.0';
+import { renderReports } from './pages/reports.js?v=2.1.0';
+import { renderNews, initNewsFilters } from './pages/news.js?v=2.1.0';
+import { renderVolunteer, initVolunteerForm } from './pages/volunteer.js?v=2.1.0';
+import { renderFaq, initFaqAccordion } from './pages/faq.js?v=2.1.0';
+import { renderPrivacy } from './pages/privacy.js?v=2.1.0';
+import { renderTerms } from './pages/terms.js?v=2.1.0';
+import { renderJoin, initJoinForm } from './pages/join.js?v=2.1.0';
+import { renderFarmerAward, initFarmerAwardForm } from './pages/farmer-award.js?v=2.1.0';
+import { renderNotFound } from './pages/notfound.js?v=2.1.0';
 
-import { applyTranslations } from './i18n.js?v=2.0.1';
-import { reinitAnimations } from './animations.js?v=2.0.1';
-import { updateSEO } from './seo.js?v=2.0.1';
-import { bindGalleryItems } from './lightbox.js?v=2.0.1';
-import { updateMobileNavActive } from './mobile-menu.js?v=2.0.1';
+import { applyTranslations } from './i18n.js?v=2.1.0';
+import { reinitAnimations } from './animations.js?v=2.1.0';
+import { updateSEO } from './seo.js?v=2.1.0';
+import { bindGalleryItems } from './lightbox.js?v=2.1.0';
+import { updateMobileNavActive } from './mobile-menu.js?v=2.1.0';
 
 /** Route → render function map */
 const routes = {

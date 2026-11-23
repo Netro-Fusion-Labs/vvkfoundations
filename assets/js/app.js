@@ -4,11 +4,11 @@
  * initializes i18n, router, and core UI modules.
  */
 
-import { initI18n, getCurrentLang, setLanguage } from './i18n.js?v=2.0.1';
-import { initRouter } from './router.js?v=2.0.1';
-import { initAnimations } from './animations.js?v=2.0.1';
-import { initLightbox } from './lightbox.js?v=2.0.1';
-import { initMobileMenu } from './mobile-menu.js?v=2.0.1';
+import { initI18n, getCurrentLang, setLanguage } from './i18n.js?v=2.1.0';
+import { initRouter } from './router.js?v=2.1.0';
+import { initAnimations } from './animations.js?v=2.1.0';
+import { initLightbox } from './lightbox.js?v=2.1.0';
+import { initMobileMenu } from './mobile-menu.js?v=2.1.0';
 
 document.addEventListener('DOMContentLoaded', async () => {
     // Failsafe: hide preloader max after 1.2s
