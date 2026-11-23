@@ -100,7 +100,7 @@ export function renderHome() {
 
                 <div class="grid-3">
                     <div class="focus-card reveal reveal--up stagger-1">
-                        <img src="/assets/images/events-2025/2025-anniversary-farmer-awards-02.jpg" alt="Farmers empowerment" loading="lazy">
+                        <img src="/assets/images/farmer.jpg" alt="Farmers empowerment" loading="lazy">
                         <div class="focus-card__content">
                             <h3 data-i18n="home.focus_farmers_title">Empower Farmers</h3>
                             <p data-i18n="home.focus_farmers_desc">From cultivation to enterprise, climate resilience & data — climate-smart farming, emerging crops (millets & horticulture), FPOs, value addition, direct market linkages, and digital advisory.</p>

@@ -11,7 +11,7 @@
  */
 
 import { PROGRAMS, CHRONICLE } from '../data/initiatives.js?v=2.0.1';
-import { renderImpactHero } from '../components/initiatives/ImpactHeroMetrics.js?v=2.0.2';
+import { renderImpactHero } from '../components/initiatives/ImpactHeroMetrics.js?v=2.0.3';
 import { renderStrategicPillars, renderFlagshipFilterBar } from '../components/initiatives/StrategicPillarsFilter.js?v=2.0.1';
 import { renderFlagshipCaseStudyCard } from '../components/initiatives/FlagshipCaseStudyCard.js?v=2.0.1';
 import { renderChronicleTimeline } from '../components/initiatives/ChronicleTimeline.js?v=2.0.1';

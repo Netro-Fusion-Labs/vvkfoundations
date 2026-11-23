@@ -5,7 +5,7 @@
  * verified grassroots impact metric strip. Quick-jump clutter removed.
  */
 
-import { METRICS, INSTITUTION } from '../../data/initiatives.js?v=2.0.1';
+import { METRICS } from '../../data/initiatives.js?v=2.0.1';
 import { esc, i18n, translate } from './shared.js?v=2.0.1';
 
 export function renderImpactHero() {
@@ -26,19 +26,6 @@ export function renderImpactHero() {
         <!-- Trust Charter & Impact Metrics Strip -->
         <section class="impact-ledger-section">
             <div class="container">
-                <!-- Trust Registration & Charter Banner (Matching Who We Are Page 2) -->
-                <div class="impact-trust-banner reveal reveal--up">
-                    <div class="impact-trust-banner__left">
-                        <div class="impact-trust-banner__reg" data-i18n="about.trust_reg">
-                            <i class="fas fa-certificate" style="color: #2b9348; margin-right: 8px;"></i> VVK Foundation Charitable Trust (Reg. No. ${esc(INSTITUTION.regNo)}, Ilkal, Bagalkot)
-                        </div>
-                        <p class="impact-trust-banner__motto" data-i18n="about.motto">
-                            With Farmers. For Farmers. For a Better Tomorrow.
-                        </p>
-                    </div>
-
-                </div>
-
                 <!-- 4-Column Verified Grassroots Metrics Strip -->
                 <div class="impact-metrics-grid reveal reveal--up">
                     ${METRICS.map((m, idx) => `

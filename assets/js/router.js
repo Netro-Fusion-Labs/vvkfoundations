@@ -4,8 +4,8 @@
  * page transitions, focus management, and ARIA announcements.
  */
 
-import { renderHome } from './pages/home.js?v=2.0.3';
-import { renderAbout } from './pages/about.js?v=2.0.1';
+import { renderHome } from './pages/home.js?v=2.0.4';
+import { renderAbout } from './pages/about.js?v=2.0.4';
 import { renderFounder } from './pages/founder.js?v=2.0.1';
 import { renderTeam, initAdvisorSpotlight } from './pages/team.js?v=2.0.1';
 import { renderInitiatives, initInitiativesPage } from './pages/initiatives.js?v=2.0.2';

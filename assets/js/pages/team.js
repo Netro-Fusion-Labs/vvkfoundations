@@ -59,15 +59,37 @@ export function renderTeam() {
 
                         <!-- Honours and Recognitions from Brochure -->
                         <div class="founder-honours mt-lg">
-                            <h4 style="font-size: 1rem; color: var(--clr-primary-dark); font-weight: 700; margin-bottom: 8px;" data-i18n="founder.honours_title"><i class="fas fa-medal" style="color: #d97706; margin-right: 6px;"></i> Honours Received</h4>
-                            <div class="d-flex flex-wrap gap-xs">
-                                <span class="tag-chip" style="background: rgba(217, 119, 6, 0.1); color: #92400e; border: 1px solid rgba(217, 119, 6, 0.25);"><i class="fas fa-award"></i> <span data-i18n="founder.honour_1">Krishi Vikram 2026 — Women Rural Empowerment Excellence Award (ICC)</span></span>
-                                <span class="tag-chip"><i class="fas fa-award"></i> <span data-i18n="founder.honour_2">Rani Chennamma Award</span></span>
-                                <span class="tag-chip"><i class="fas fa-award"></i> <span data-i18n="founder.honour_3">Onake Obavva Award</span></span>
-                                <span class="tag-chip"><i class="fas fa-award"></i> <span data-i18n="founder.honour_4">Nari Shakti Award, Solapur</span></span>
-                                <span class="tag-chip"><i class="fas fa-award"></i> <span data-i18n="founder.honour_5">Vistara News Emerging Leader Award</span></span>
-                                <span class="tag-chip"><i class="fas fa-award"></i> <span data-i18n="founder.honour_6">Parimala Award, Mantralayam</span></span>
-                                <span class="tag-chip"><i class="fas fa-award"></i> <span data-i18n="founder.honour_7">Sadbhavana Award</span></span>
+                            <h3 class="founder-honours__title" data-i18n="founder.honours_title">Honours & Recognitions Received</h3>
+                            <div class="honour-card honour-card--featured">
+                                <span class="honour-card__icon honour-card__icon--featured"><i class="fas fa-award"></i></span>
+                                <span class="honour-card__title honour-card__title--featured" data-i18n="founder.honour_1">Krishi Vikram 2026 — Women Rural Empowerment Excellence Award (ICC)</span>
+                                <span class="honour-card__badge">FEATURED RECOGNITION</span>
+                            </div>
+                            <div class="honours-grid">
+                                <div class="honour-card">
+                                    <span class="honour-card__icon"><i class="fas fa-award"></i></span>
+                                    <span class="honour-card__title" data-i18n="founder.honour_2">Rani Chennamma Award</span>
+                                </div>
+                                <div class="honour-card">
+                                    <span class="honour-card__icon"><i class="fas fa-award"></i></span>
+                                    <span class="honour-card__title" data-i18n="founder.honour_3">Onake Obavva Award</span>
+                                </div>
+                                <div class="honour-card">
+                                    <span class="honour-card__icon"><i class="fas fa-award"></i></span>
+                                    <span class="honour-card__title" data-i18n="founder.honour_4">Nari Shakti Award, Solapur</span>
+                                </div>
+                                <div class="honour-card">
+                                    <span class="honour-card__icon"><i class="fas fa-award"></i></span>
+                                    <span class="honour-card__title" data-i18n="founder.honour_5">Vistara News Emerging Leader Award</span>
+                                </div>
+                                <div class="honour-card">
+                                    <span class="honour-card__icon"><i class="fas fa-award"></i></span>
+                                    <span class="honour-card__title" data-i18n="founder.honour_6">Parimala Award, Mantralayam</span>
+                                </div>
+                                <div class="honour-card">
+                                    <span class="honour-card__icon"><i class="fas fa-award"></i></span>
+                                    <span class="honour-card__title" data-i18n="founder.honour_7">Sadbhavana Award</span>
+                                </div>
                             </div>
                         </div>
 
@@ -102,7 +124,7 @@ export function renderTeam() {
                             </div>
                         </div>
                         <div class="advisor-exec-card__bio" data-i18n="team.adv_alur_desc">
-                            Distinguished Agricultural Scientist, Policy Expert, and Institution Builder with over 25 years of leadership across agriculture, horticulture, higher education, natural resource management, and food security. Currently serving as the First Vice Chancellor of Kodagu University, he previously served as the First Vice Chancellor of BEST University (Anantapur), Special Officer establishing UHS Bagalkot, and First Director of Karnataka's Centre of Excellence for FPOs—where he spearheaded the capacity building of 1,250+ FPOs and helped formulate the Karnataka State FPO Policy-2018 benefiting over one million farming families. He has led international programs with ICRISAT, FAO, CFC, SDC, and the World Bank across Asia and Africa, authored 50+ books and 230 resource atlases, and leads the Mission Million Millet Farmers campaign.
+                            Distinguished Agricultural Scientist, Policy Expert, and Institution Builder with over 25 years of leadership across agriculture, horticulture, higher education, natural resource management, and food security. Currently serving as the First Vice Chancellor of Kodagu University, he previously served as First Vice Chancellor of BEST University (Anantapur), Special Officer establishing UHS Bagalkot, and First Director of Karnataka's Centre of Excellence for FPOs. There, he spearheaded capacity building for 1,250+ FPOs and helped formulate the Karnataka State FPO Policy–2018, benefiting over one million farming families. He has led international programs with ICRISAT, FAO, CFC, SDC, and the World Bank, authored 50+ books and 230 atlases, and leads the Mission Million Millet Farmers campaign.
                         </div>
                         <div class="advisor-exec-card__tags">
                             <span class="tag-chip"><i class="fas fa-graduation-cap"></i> Higher Education & Policy</span>
@@ -128,7 +150,7 @@ export function renderTeam() {
                             </div>
                         </div>
                         <div class="advisor-exec-card__bio" data-i18n="team.adv_biradar_desc">
-                            Accomplished Earth System Scientist and Green Growth Architect with over three decades of pioneering research across 50+ countries. He has held senior scientific leadership roles at CGIAR centers (ICARDA, IWMI, ICRISAT, CIFOR, ICRAF), UN-FAO, and the World Bank. Dr. Biradar is the architect behind transformative frameworks including Nandi Krishi, Green Grama Swarajya, circular village bio-economies, and agro-pastoral ecosystem restoration. At VVK Foundation, he steers strategic roadmaps for sustainable agriculture, watershed revitalization, climate-resilient livelihoods, and ecological stewardship.
+                            Accomplished Earth System Scientist and Green Growth Architect with over three decades of pioneering research across 50+ countries. He has held senior scientific leadership roles at CGIAR centers including ICARDA, IWMI, ICRISAT, CIFOR, ICRAF, UN-FAO, and the World Bank. Dr. Biradar is the architect behind transformative frameworks such as Nandi Krishi, Green Grama Swarajya, circular village bio-economies, and agro-pastoral ecosystem restoration. At VVK Foundation, he steers strategic roadmaps for sustainable agriculture, horticultural value addition, crop aggregation, watershed revitalization, climate-resilient livelihoods, and ecological stewardship across rural farming communities.
                         </div>
                         <div class="advisor-exec-card__tags">
                             <span class="tag-chip"><i class="fas fa-seedling"></i> Regenerative Agriculture</span>
@@ -159,7 +181,7 @@ export function renderTeam() {
                             </div>
                         </div>
                         <div class="advisor-exec-card__bio" data-i18n="team.adv_akkai_desc">
-                            Internationally acclaimed social reformer, motivational speaker, and founder of 'Ondede' (Convergence), pioneering advocacy for sexual minorities, women, and children. She is a recipient of the prestigious Karnataka Rajyotsava Award (second highest civilian honor by GoK) and the Ashoka Global Fellowship supported by Tata Trusts. Conferred an Honorary Doctorate and serving on the Karnataka State Education Policy Commission and Supreme Court-appointed committees, she guides VVK Foundation on gender equality, community dignity, legal literacy, and holistic empowerment of marginalized communities.
+                            Internationally acclaimed social reformer, motivational speaker, and founder of 'Ondede' (Convergence), pioneering advocacy for sexual minorities, women, and children. She is a recipient of the prestigious Karnataka Rajyotsava Award (the state's second-highest civilian honor) and the Ashoka Global Fellowship supported by Tata Trusts. Conferred an Honorary Doctorate and serving on the Karnataka State Education Policy Commission and Supreme Court-appointed committees, she brings deep institutional experience to public policy. At VVK Foundation, she guides strategic work on gender equality, community dignity, legal literacy, and the holistic empowerment of marginalized rural communities.
                         </div>
                         <div class="advisor-exec-card__tags">
                             <span class="tag-chip"><i class="fas fa-balance-scale"></i> Human Rights Advocacy</span>
@@ -196,7 +218,7 @@ export function renderTeam() {
                             </div>
                         </div>
                         <div class="advisor-exec-card__bio" data-i18n="team.adv_gouda_desc">
-                            Veteran banking, consumer credit, and fintech innovator with over 30 years of retail lending and priority-sector financial inclusion leadership. Formerly National Head and Chief Risk Officer at Axis Bank (managing a ~USD 2 Billion credit portfolio), he serves on the Fintech Task Group (Govt. of Karnataka) and the Fintech Committee at IIM Bangalore. At VVK Foundation, he shapes digital financial literacy, Kisan Credit Card (KCC) enablement, dairy joint-liability credit models, and last-mile digital identity solutions for rural families.
+                            Veteran banking, consumer credit, and fintech innovator with over 30 years of retail lending and priority-sector financial inclusion leadership. Formerly National Head and Chief Risk Officer at Axis Bank—managing a ~USD 2 Billion credit portfolio—he also serves on the Fintech Task Group (Government of Karnataka) and the Fintech Committee at IIM Bangalore. Through these roles, he shapes digital financial literacy and rural credit architecture across Karnataka. At VVK Foundation, he advises on Kisan Credit Card (KCC) enablement, dairy joint-liability credit models, and last-mile digital identity solutions for farming families.
                         </div>
                         <div class="advisor-exec-card__tags">
                             <span class="tag-chip"><i class="fas fa-university"></i> Priority-Sector Credit</span>
@@ -227,7 +249,7 @@ export function renderTeam() {
                             </div>
                         </div>
                         <div class="advisor-exec-card__bio" data-i18n="team.adv_sajjanar_desc">
-                            Committed agricultural entrepreneur and visionary grassroots leader who spearheaded the establishment of Hungunda Horticulture Farmers Producer Company (FPO) in July 2018. He champions collective farming, horticultural value addition, crop aggregation, and market linkages across 50 Farmer Interest Groups in North Karnataka. His leadership connects rural growers with modern agricultural technologies, institutional financing, and direct export linkages, transforming traditional farmers into confident, market-oriented agribusiness entrepreneurs.
+                            Committed agricultural entrepreneur and visionary grassroots leader who spearheaded the establishment of Hungunda Horticulture Farmers Producer Company (FPO) in July 2018. He champions collective farming, horticultural value addition, crop aggregation, and direct market linkages across 50 Farmer Interest Groups in North Karnataka. His leadership connects rural growers with modern agricultural technologies, institutional financing, and structured export channels. At VVK Foundation, he works closely with grassroots farmer collectives to transform traditional smallholder growers into confident, market-oriented agribusiness entrepreneurs with stronger bargaining power and sustainable incomes.
                         </div>
                         <div class="advisor-exec-card__tags">
                             <span class="tag-chip"><i class="fas fa-tractor"></i> Collective Farming</span>
@@ -261,7 +283,7 @@ export function renderTeam() {
                             </div>
                         </div>
                         <div class="advisor-exec-card__bio" data-i18n="team.adv_shafeeulla_desc">
-                            Shafeeulla K A brings over 20 years of experience in the software and technology industry, with expertise in technology management, digital transformation and project leadership. At VVK Foundation, he will focus on leveraging technology to strengthen the foundation's operational capabilities, streamline processes and enable impactful initiatives. His role will include guiding digital strategy, identifying technology-driven solutions, supporting the development of digital platforms, strengthening data management and enabling effective monitoring of social development programs. He aims to bridge technology and social impact by introducing practical, scalable and sustainable solutions that enhance the foundation's reach, efficiency and long-term impact.
+                            Experienced technology leader bringing over 20 years of expertise in the software industry, technology management, digital transformation, and large-scale project leadership. His focus lies in leveraging modern digital systems to strengthen institutional operational capabilities, streamline workflows, and enable high-impact social initiatives. He guides digital strategy, identifies scalable technology-driven solutions, and oversees the development of digital platforms and robust data management systems. At VVK Foundation, he enables effective monitoring of social development programs by bridging technology and social impact to enhance organizational reach, efficiency, and long-term sustainability.
                         </div>
                         <div class="advisor-exec-card__tags">
                             <span class="tag-chip"><i class="fas fa-laptop-code"></i> Digital Strategy</span>

@@ -47,15 +47,37 @@ export function renderFounder() {
 
                         <!-- Honours and Recognitions from Brochure -->
                         <div class="founder-honours mt-lg">
-                            <h4 style="font-size: 1rem; color: var(--clr-primary-dark); font-weight: 700; margin-bottom: 8px;" data-i18n="founder.honours_title"><i class="fas fa-medal" style="color: #d97706; margin-right: 6px;"></i> Honours Received</h4>
-                            <div class="d-flex flex-wrap gap-xs">
-                                <span class="tag-chip" style="background: rgba(217, 119, 6, 0.1); color: #92400e; border: 1px solid rgba(217, 119, 6, 0.25);"><i class="fas fa-award"></i> <span data-i18n="founder.honour_1">Krishi Vikram 2026 — Women Rural Empowerment Excellence Award (ICC)</span></span>
-                                <span class="tag-chip"><i class="fas fa-award"></i> <span data-i18n="founder.honour_2">Rani Chennamma Award</span></span>
-                                <span class="tag-chip"><i class="fas fa-award"></i> <span data-i18n="founder.honour_3">Onake Obavva Award</span></span>
-                                <span class="tag-chip"><i class="fas fa-award"></i> <span data-i18n="founder.honour_4">Nari Shakti Award, Solapur</span></span>
-                                <span class="tag-chip"><i class="fas fa-award"></i> <span data-i18n="founder.honour_5">Vistara News Emerging Leader Award</span></span>
-                                <span class="tag-chip"><i class="fas fa-award"></i> <span data-i18n="founder.honour_6">Parimala Award, Mantralayam</span></span>
-                                <span class="tag-chip"><i class="fas fa-award"></i> <span data-i18n="founder.honour_7">Sadbhavana Award</span></span>
+                            <h3 class="founder-honours__title" data-i18n="founder.honours_title">Honours & Recognitions Received</h3>
+                            <div class="honour-card honour-card--featured">
+                                <span class="honour-card__icon honour-card__icon--featured"><i class="fas fa-award"></i></span>
+                                <span class="honour-card__title honour-card__title--featured" data-i18n="founder.honour_1">Krishi Vikram 2026 — Women Rural Empowerment Excellence Award (ICC)</span>
+                                <span class="honour-card__badge">FEATURED RECOGNITION</span>
+                            </div>
+                            <div class="honours-grid">
+                                <div class="honour-card">
+                                    <span class="honour-card__icon"><i class="fas fa-award"></i></span>
+                                    <span class="honour-card__title" data-i18n="founder.honour_2">Rani Chennamma Award</span>
+                                </div>
+                                <div class="honour-card">
+                                    <span class="honour-card__icon"><i class="fas fa-award"></i></span>
+                                    <span class="honour-card__title" data-i18n="founder.honour_3">Onake Obavva Award</span>
+                                </div>
+                                <div class="honour-card">
+                                    <span class="honour-card__icon"><i class="fas fa-award"></i></span>
+                                    <span class="honour-card__title" data-i18n="founder.honour_4">Nari Shakti Award, Solapur</span>
+                                </div>
+                                <div class="honour-card">
+                                    <span class="honour-card__icon"><i class="fas fa-award"></i></span>
+                                    <span class="honour-card__title" data-i18n="founder.honour_5">Vistara News Emerging Leader Award</span>
+                                </div>
+                                <div class="honour-card">
+                                    <span class="honour-card__icon"><i class="fas fa-award"></i></span>
+                                    <span class="honour-card__title" data-i18n="founder.honour_6">Parimala Award, Mantralayam</span>
+                                </div>
+                                <div class="honour-card">
+                                    <span class="honour-card__icon"><i class="fas fa-award"></i></span>
+                                    <span class="honour-card__title" data-i18n="founder.honour_7">Sadbhavana Award</span>
+                                </div>
                             </div>
                         </div>
 
