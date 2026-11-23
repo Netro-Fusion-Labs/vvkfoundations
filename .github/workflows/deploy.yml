@@ -1,0 +1,68 @@
+name: Deploy to GoDaddy cPanel (FTPS)
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Dry run: list what would be uploaded without changing the server"
+        type: boolean
+        default: true
+
+# Never run two deployments at once; let a running transfer finish.
+concurrency:
+  group: deploy-production
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    name: Deploy via FTPS
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # No build step: the site is plain static HTML/CSS/JS (no package.json,
+      # no bundler), so the repo root is deployed as-is.
+
+      - name: Upload to cPanel
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftps
+          local-dir: ./
+          # The FTP account is locked to /home/<user>/public_html/vvkfoundation.in,
+          # so its root (./) is the site folder. If you use a broader account
+          # instead, set the repo variable FTP_SERVER_DIR to /public_html/vvkfoundation.in/
+          server-dir: ${{ vars.FTP_SERVER_DIR || './' }}
+          dry-run: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run }}
+          # Providing `exclude` replaces the action's defaults, so Git and
+          # node_modules entries are listed explicitly below.
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
+            .github/**
+            .gitignore
+            .htaccess
+            .env*
+            **/.env*
+            **/.DS_Store
+            .ftpquota
+            *.zip
+            **/*.zip
+            Backup_19_nov/**
+            server.py
+            serve.json
+            Code.gs
+            docs/**
+            README*
+            .well-known/**
+            cgi-bin/**
