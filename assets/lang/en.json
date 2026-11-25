@@ -1,4 +1,4 @@
-﻿{
+{
     "nav": {
         "home": "Home",
         "about": "Who We Are",
@@ -655,5 +655,33 @@
         "terms_desc": "Read the terms of service for using the VVK Foundation website.",
         "join_title": "Join Community",
         "join_desc": "Register to join the VVK Foundation Community. Access free competitive exam coaching, women empowerment schemes, and farming welfare initiatives."
+    },
+    "donate": {
+        "eyebrow": "SUPPORT OUR MISSION",
+        "title": "Every Contribution Builds a Stronger Tomorrow",
+        "description": "Your generosity directly fuels grassroots programs empowering Farmers with climate-smart agriculture, Women with enterprise & healthcare, and Youth with free competitive exam coaching across Karnataka.",
+        "trust_1_title": "Direct Bank Transfer (NEFT / RTGS / IMPS)",
+        "trust_1_desc": "100% of your contribution goes directly to the official VVK Foundation Charitable Trust SBI account.",
+        "trust_2_title": "100% Transparent Grassroots Impact",
+        "trust_2_desc": "Registered Charitable Trust (Reg. No. BGK-4-00062-2023-24) with published annual impact reports.",
+        "trust_3_title": "Instant Receipt Confirmation",
+        "trust_3_desc": "Share your transaction reference via WhatsApp for quick acknowledgment from our team.",
+        "card_title": "Direct Bank Transfer",
+        "card_subtitle": "NEFT / RTGS / IMPS Accepted",
+        "sbi_badge": "SBI · State Bank of India",
+        "label_account_name": "Account Name",
+        "label_bank_name": "Bank Name",
+        "label_account_number": "Account Number",
+        "label_account_type": "Account Type",
+        "label_ifsc": "IFSC Code",
+        "label_branch": "Branch",
+        "label_micr": "MICR Code",
+        "upi_title": "Scan & Pay via UPI",
+        "upi_desc": "Supports Google Pay, PhonePe, Paytm & BHIM UPI",
+        "copy_all": "Copy All Bank Details",
+        "whatsapp_cta": "Share Payment Confirmation on WhatsApp",
+        "copied": "Copied!",
+        "toast_copied": "Copied to clipboard!",
+        "toast_all_copied": "All bank details copied!"
     }
 }

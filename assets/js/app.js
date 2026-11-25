@@ -9,6 +9,8 @@ import { initRouter } from './router.js?v=2.1.0';
 import { initAnimations } from './animations.js?v=2.1.0';
 import { initLightbox } from './lightbox.js?v=2.1.0';
 import { initMobileMenu } from './mobile-menu.js?v=2.1.0';
+import { initDonation } from './donation.js?v=2.1.0';
+import { initVolunteerModal } from './volunteer-modal.js?v=2.1.0';
 
 document.addEventListener('DOMContentLoaded', async () => {
     // Failsafe: hide preloader max after 1.2s
@@ -25,6 +27,8 @@ document.addEventListener('DOMContentLoaded', async () => {
         initLightbox();
         initMobileMenu();
         initAnimations();
+        initDonation();
+        initVolunteerModal();
 
         // 4. Initialize router (will trigger first render)
         initRouter();
