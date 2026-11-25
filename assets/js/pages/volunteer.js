@@ -44,38 +44,7 @@ export function renderVolunteer() {
                 <div class="container--narrow mx-auto">
                     <div class="contact-form-card reveal reveal--up">
                         <h3 class="text-center mb-xl" data-i18n="volunteer.form_title">Express Your Interest</h3>
-                        <form id="volunteer-form" novalidate>
-                            <div class="grid-2" style="gap: var(--space-lg);">
-                                <div class="form-group">
-                                    <label class="form-label" for="vol-name" data-i18n="contact.form_name_label">Full Name</label>
-                                    <input type="text" id="vol-name" class="form-control" required autocomplete="name" data-i18n-placeholder="contact.form_name">
-                                    <span class="form-error" data-i18n="contact.error_name">Please enter your name</span>
-                                </div>
-                                <div class="form-group">
-                                    <label class="form-label" for="vol-email" data-i18n="contact.form_email_label">Email Address</label>
-                                    <input type="email" id="vol-email" class="form-control" required autocomplete="email" data-i18n-placeholder="contact.form_email">
-                                    <span class="form-error" data-i18n="contact.error_email">Please enter a valid email</span>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="form-label" for="vol-area" data-i18n="volunteer.area_label">Area of Interest</label>
-                                <select id="vol-area" class="form-control" required>
-                                    <option value="" data-i18n="volunteer.select_area">Select an area</option>
-                                    <option value="teaching" data-i18n="volunteer.area_1_title">Teaching & Mentoring</option>
-                                    <option value="health" data-i18n="volunteer.area_2_title">Health, Wellness & Hygiene</option>
-                                    <option value="outreach" data-i18n="volunteer.area_3_title">Awareness & Outreach</option>
-                                    <option value="other" data-i18n="volunteer.area_other">Other</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label class="form-label" for="vol-message" data-i18n="volunteer.message_label">Tell us about yourself</label>
-                                <textarea id="vol-message" class="form-control" rows="4" data-i18n-placeholder="volunteer.message_placeholder"></textarea>
-                            </div>
-                            <button type="submit" class="btn btn--primary w-full magnetic" data-i18n="volunteer.submit">Submit Interest</button>
-                        </form>
-                        <div id="volunteer-success" class="form-success mt-lg" style="display:none;">
-                            <p data-i18n="volunteer.success">Thank you for your interest! We'll be in touch soon.</p>
-                        </div>
+                        ${renderVolunteerFormMarkup('vol')}
                     </div>
                 </div>
             </div>
@@ -83,9 +52,59 @@ export function renderVolunteer() {
     `;
 }
 
+/**
+ * Reusable volunteer form markup.
+ * @param {string} prefix - Unique ID prefix to avoid duplicate IDs when rendered in modal.
+ */
+export function renderVolunteerFormMarkup(prefix = 'vol') {
+    return `
+        <form id="${prefix}-form" novalidate>
+            <div class="grid-2" style="gap: var(--space-lg);">
+                <div class="form-group">
+                    <label class="form-label" for="${prefix}-name" data-i18n="contact.form_name_label">Full Name</label>
+                    <input type="text" id="${prefix}-name" class="form-control" required autocomplete="name" data-i18n-placeholder="contact.form_name">
+                    <span class="form-error" data-i18n="contact.error_name">Please enter your name</span>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="${prefix}-email" data-i18n="contact.form_email_label">Email Address</label>
+                    <input type="email" id="${prefix}-email" class="form-control" required autocomplete="email" data-i18n-placeholder="contact.form_email">
+                    <span class="form-error" data-i18n="contact.error_email">Please enter a valid email</span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="${prefix}-area" data-i18n="volunteer.area_label">Area of Interest</label>
+                <select id="${prefix}-area" class="form-control" required>
+                    <option value="" data-i18n="volunteer.select_area">Select an area</option>
+                    <option value="teaching" data-i18n="volunteer.area_1_title">Teaching & Mentoring</option>
+                    <option value="health" data-i18n="volunteer.area_2_title">Health, Wellness & Hygiene</option>
+                    <option value="outreach" data-i18n="volunteer.area_3_title">Awareness & Outreach</option>
+                    <option value="other" data-i18n="volunteer.area_other">Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="${prefix}-message" data-i18n="volunteer.message_label">Tell us about yourself</label>
+                <textarea id="${prefix}-message" class="form-control" rows="4" data-i18n-placeholder="volunteer.message_placeholder"></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary w-full magnetic" data-i18n="volunteer.submit">Submit Interest</button>
+        </form>
+        <div id="${prefix}-success" class="form-success mt-lg" style="display:none;">
+            <p data-i18n="volunteer.success">Thank you for your interest! We'll be in touch soon.</p>
+        </div>
+    `;
+}
+
 export function initVolunteerForm() {
-    const form = document.getElementById('volunteer-form');
-    if (!form) return;
+    bindVolunteerForm('vol');
+}
+
+/**
+ * Bind validation and submission behavior to a volunteer form instance.
+ * @param {string} prefix - Matching ID prefix passed to renderVolunteerFormMarkup.
+ */
+export function bindVolunteerForm(prefix = 'vol') {
+    const form = document.getElementById(`${prefix}-form`);
+    const successEl = document.getElementById(`${prefix}-success`);
+    if (!form || !successEl) return;
 
     form.addEventListener('submit', (e) => {
         e.preventDefault();
@@ -99,7 +118,7 @@ export function initVolunteerForm() {
         });
         if (isValid) {
             form.style.display = 'none';
-            document.getElementById('volunteer-success').style.display = 'block';
+            successEl.style.display = 'block';
         }
     });
 

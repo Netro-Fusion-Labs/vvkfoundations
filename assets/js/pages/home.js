@@ -1,10 +1,11 @@
-﻿/**
+/**
  * VVK Foundation — Home Page
  * Premium landing page with hero, features, focus areas,
  * impact stats, founder preview, initiatives, reach, and CTA.
  */
 
 import { translate } from '../i18n.js?v=2.0.1';
+import { renderDonationSection } from '../donation.js?v=2.1.0';
 
 export function renderHome() {
     return `
@@ -435,6 +436,9 @@ export function renderHome() {
                 </div>
             </div>
         </section>
+
+        <!-- ═══════ DONATION / SUPPORT US ═══════ -->
+        ${renderDonationSection()}
 
         <!-- ═══════ CTA ═══════ -->
         <section class="cta-section">
