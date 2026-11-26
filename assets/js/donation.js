@@ -5,7 +5,7 @@
  * and WhatsApp confirmation.
  */
 
-import { applyTranslations, translate } from './i18n.js?v=2.1.0';
+import { applyTranslations, translate } from './i18n.js?v=2.1.1';
 
 const BANK_DETAILS = {
     accountName: 'VEENA V KASHAPPANAVAR FOUNDATION CHARITABLE TRUST',

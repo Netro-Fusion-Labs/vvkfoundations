@@ -4,8 +4,8 @@
  * the volunteer registration form in an accessible modal with background scroll lock.
  */
 
-import { applyTranslations } from './i18n.js?v=2.1.0';
-import { renderVolunteerFormMarkup, bindVolunteerForm } from './pages/volunteer.js?v=2.1.0';
+import { applyTranslations } from './i18n.js?v=2.1.1';
+import { renderVolunteerFormMarkup, bindVolunteerForm } from './pages/volunteer.js?v=2.1.1';
 
 export function initVolunteerModal() {
     ensureVolunteerPill();

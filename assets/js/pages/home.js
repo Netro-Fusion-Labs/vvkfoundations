@@ -5,7 +5,7 @@
  */
 
 import { translate } from '../i18n.js?v=2.0.1';
-import { renderDonationSection } from '../donation.js?v=2.1.0';
+import { renderDonationSection } from '../donation.js?v=2.1.1';
 
 export function renderHome() {
     return `
