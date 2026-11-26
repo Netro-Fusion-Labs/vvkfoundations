@@ -2,6 +2,8 @@
  * VVK Foundation — About Page
  */
 
+import { renderComplianceDetails } from '../compliance.js?v=2.1.1';
+
 export function renderAbout() {
     return `
         <section class="page-hero">
@@ -33,6 +35,7 @@ export function renderAbout() {
                     <div>
                         <div class="about-trust__reg" data-i18n="about.trust_reg">VVK Foundation Charitable Trust (Reg. No. BGK-4-00062-2023-24, Ilkal, Bagalkot)</div>
                         <p class="about-trust__motto" data-i18n="about.motto">With Farmers. For Farmers. For a Better Tomorrow.</p>
+                        ${renderComplianceDetails()}
                     </div>
                 </div>
             </div>

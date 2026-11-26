@@ -6,6 +6,7 @@
  */
 
 import { applyTranslations, translate } from './i18n.js?v=2.1.1';
+import { renderComplianceDetails } from './compliance.js?v=2.1.1';
 
 const BANK_DETAILS = {
     accountName: 'VEENA V KASHAPPANAVAR FOUNDATION CHARITABLE TRUST',
@@ -196,6 +197,7 @@ export function renderDonationSection() {
                                 </div>
                             </li>
                         </ul>
+                        ${renderComplianceDetails()}
                     </div>
 
                     <!-- Right Column: Official Bank Details Card -->

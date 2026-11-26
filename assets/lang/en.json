@@ -490,6 +490,7 @@
         "address_label": "#4521, SRK Nilaya, Ilkal, Bagalkot – 587125",
         "phone": "+91 76767 40862",
         "copyright": "© 2026 VVK Foundation Charitable Trust · Reg. No. BGK-4-00062-2023-24",
+        "compliance": "PAN AAETV1389F · Reg. u/s 332 (Provisional) URN AAETV1389FE20261 · Approval u/s 354 (Provisional) URN AAETV1389FF20261 · NGO DARPAN KA/2026/1137243",
         "privacy": "Privacy Policy",
         "terms": "Terms of Service",
         "join_community": "Join Our Community (QR)"
@@ -655,6 +656,15 @@
         "terms_desc": "Read the terms of service for using the VVK Foundation website.",
         "join_title": "Join Community",
         "join_desc": "Register to join the VVK Foundation Community. Access free competitive exam coaching, women empowerment schemes, and farming welfare initiatives."
+    },
+    "compliance": {
+        "pan": "PAN",
+        "registration": "Registration u/s 332 (Provisional)",
+        "approval": "Approval u/s 354 (Provisional)",
+        "urn": "URN",
+        "din": "DIN",
+        "darpan": "NGO DARPAN ID",
+        "validity": "Both orders valid for TY 2026-27 to TY 2028-29."
     },
     "donate": {
         "eyebrow": "SUPPORT OUR MISSION",
