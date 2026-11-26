@@ -27,8 +27,20 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # No build step: the site is plain static HTML/CSS/JS (no package.json,
-      # no bundler), so the repo root is deployed as-is.
+      # No bundler: the site is plain static HTML/CSS/JS. The only "build"
+      # is cache-busting: Cloudflare and browsers cache JS/CSS for a month, so
+      # rewrite every ?v=<x> on .js/.css/.json URLs to this commit's SHA.
+      # Runs on the runner only; the repository files are not modified.
+      - name: Stamp asset version (cache-busting)
+        run: |
+          VERSION="${GITHUB_SHA::8}"
+          FILES=$(grep -rlE '\.(js|css|json)\?v=' index.html 404.html assets --include='*.html' --include='*.js' || true)
+          echo "$FILES" | xargs -r perl -pi -e "s/(\.(?:js|css|json))\?v=[0-9A-Za-z.]+/\$1?v=${VERSION}/g"
+          echo "Stamped v=${VERSION} into $(echo "$FILES" | wc -l) files"
+          # Fail if any stale version string survived.
+          if grep -rnE "\.(js|css|json)\?v=" index.html 404.html assets | grep -v "v=${VERSION}"; then
+            echo "Unstamped asset versions found"; exit 1
+          fi
 
       - name: Upload to cPanel
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
