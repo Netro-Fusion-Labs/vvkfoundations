@@ -32,7 +32,7 @@
     <link rel="stylesheet" href="/assets/css/variables.css?v=2.1.1">
     <link rel="stylesheet" href="/assets/css/reset.css?v=2.1.1">
     <link rel="stylesheet" href="/assets/css/utilities.css?v=2.1.1">
-    <link rel="stylesheet" href="/assets/css/global.css?v=2.1.1">
+    <link rel="stylesheet" href="/assets/css/global.css?v=2.1.2">
     <link rel="stylesheet" href="/assets/css/components.css?v=2.1.1">
     <link rel="stylesheet" href="/assets/css/animations.css?v=2.1.1">
     <link rel="stylesheet" href="/assets/css/pages.css?v=2.1.1">
@@ -110,10 +110,7 @@
         <a href="/team" data-route data-i18n="nav.team">Leadership & Team</a>
         <a href="/initiatives" data-route data-i18n="nav.initiatives">Our Impact</a>
         <a href="/gallery" data-route data-i18n="nav.gallery">Gallery</a>
-        <a href="/reports" data-route data-i18n="nav.reports">Reports</a>
-        <a href="/news" data-route data-i18n="nav.news">News & Events</a>
         <a href="/volunteer" data-route data-i18n="nav.volunteer">Volunteer</a>
-        <a href="/faq" data-route data-i18n="nav.faq">FAQ</a>
         <a href="/contact" data-route data-i18n="nav.contact">Contact Us</a>
         <a href="#donate" class="btn btn--primary btn--sm js-open-donate" style="margin-top: var(--space-sm); text-align: center;" data-i18n="nav.donate">Support Us</a>
         <div class="mobile-lang">
@@ -139,7 +136,6 @@
                 <a href="/team" data-route data-i18n="nav.team">Leadership</a>
                 <a href="/initiatives" data-route data-i18n="nav.initiatives">Impact</a>
                 <a href="/gallery" data-route data-i18n="nav.gallery">Gallery</a>
-                <a href="/reports" data-route data-i18n="nav.reports">Reports</a>
                 <a href="/contact" data-route data-i18n="nav.contact">Contact</a>
             </nav>
 
@@ -172,37 +168,27 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-top">
-                <!-- Brand Col -->
+                <!-- Column 1: Brand -->
                 <div class="footer-brand">
                     <img src="/assets/images/logo.png" alt="VVK Foundation" class="footer-logo">
                     <p class="footer-tagline" data-i18n="footer.tag">With Farmers. For Farmers. For a Better Tomorrow.</p>
                     <p class="footer-desc" data-i18n="footer.description">Empowering farmers, women, and youth across Karnataka through sustainable agriculture, enterprise, healthcare, and education.</p>
                 </div>
 
-                <!-- Quick Links -->
+                <!-- Column 2: Unified Quick Links -->
                 <div class="footer-col">
-                    <h4 data-i18n="footer.quick_links">Navigate</h4>
+                    <h4 data-i18n="footer.quick_links">Quick Links</h4>
                     <ul>
                         <li><a href="/about" data-route data-i18n="nav.about">Who We Are</a></li>
                         <li><a href="/team" data-route data-i18n="nav.team">Leadership & Team</a></li>
                         <li><a href="/initiatives" data-route data-i18n="nav.initiatives">Our Impact</a></li>
-                        <li><a href="/news" data-route data-i18n="nav.news">News & Events</a></li>
                         <li><a href="/join" data-route data-i18n="nav.join">Join Farmer Network</a></li>
-                    </ul>
-                </div>
-
-                <!-- Resources -->
-                <div class="footer-col">
-                    <h4 data-i18n="footer.resources">Resources</h4>
-                    <ul>
-                        <li><a href="/reports" data-route data-i18n="nav.reports">Annual Reports</a></li>
-                        <li><a href="/gallery" data-route data-i18n="nav.gallery">Photo Gallery</a></li>
+                        <li><a href="/gallery" data-route data-i18n="nav.gallery">Gallery</a></li>
                         <li><a href="/volunteer" data-route data-i18n="nav.volunteer">Volunteer</a></li>
-                        <li><a href="/faq" data-route data-i18n="nav.faq">Frequently Asked Questions</a></li>
                     </ul>
                 </div>
 
-                <!-- Contact -->
+                <!-- Column 3: Contact & Socials -->
                 <div class="footer-col">
                     <h4 data-i18n="footer.contact">Contact Us</h4>
                     <ul>
@@ -231,18 +217,19 @@
                 </div>
             </div>
 
+            <!-- Statutory registrations: one full-width line -->
+            <p class="footer-registrations">
+                <span data-i18n="footer.compliance_1">PAN AAETV1389F • Reg. u/s 332 (Provisional) URN AAETV1389FE20261</span>
+                <span class="footer-reg-sep" aria-hidden="true">•</span>
+                <span data-i18n="footer.compliance_2">Approval u/s 354 (Provisional) URN AAETV1389FF20261 • NGO DARPAN KA/2026/1137243</span>
+            </p>
+
             <div class="footer-bottom">
-                <div class="footer-copyright-col"
-                    style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; justify-content: center;">
-                    <span data-i18n="footer.copyright">&copy; 2026 VVK Foundation Charitable Trust · Reg. No. BGK-4-00062-2023-24</span>
-                    <span class="footer-compliance" data-i18n="footer.compliance">PAN AAETV1389F · Reg. u/s 332 (Provisional) URN AAETV1389FE20261 · Approval u/s 354 (Provisional) URN AAETV1389FF20261 · NGO DARPAN KA/2026/1137243</span>
-                    <span class="footer-credit-divider" style="opacity: 0.5;">|</span>
-                    <span class="footer-credit">Designed by <a href="https://netrofusion.in/" target="_blank"
-                            rel="noopener noreferrer" style="color: var(--clr-accent); font-weight: 500;">Netro Fusion
-                            Labs</a></span>
-                </div>
+                <span class="footer-copyright" data-i18n="footer.copyright">&copy; 2026 VVK Foundation Charitable Trust • Reg. No. BGK-4-00062-2023-24</span>
+                <span class="footer-credit">Designed by <a href="https://netrofusion.in/" target="_blank" rel="noopener noreferrer">Netro Fusion Labs</a></span>
                 <div class="legal-links">
                     <a href="/privacy" data-route data-i18n="footer.privacy">Privacy Policy</a>
+                    <span class="legal-sep" aria-hidden="true">•</span>
                     <a href="/terms" data-route data-i18n="footer.terms">Terms of Service</a>
                 </div>
             </div>

@@ -2392,12 +2392,3 @@
     font-size: var(--fs-caption);
     color: var(--clr-text-muted);
 }
-
-/* Footer one-line statutory strip */
-.footer-compliance {
-    flex-basis: 100%;
-    text-align: center;
-    font-size: var(--fs-caption);
-    line-height: 1.6;
-    opacity: 0.85;
-}

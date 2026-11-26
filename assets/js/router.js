@@ -1,4 +1,4 @@
-﻿/**
+/**
  * VVK Foundation — SPA Router
  * History API-based routing with scroll restoration,
  * page transitions, focus management, and ARIA announcements.
@@ -11,10 +11,7 @@ import { renderTeam, initAdvisorSpotlight } from './pages/team.js?v=2.1.1';
 import { renderInitiatives, initInitiativesPage } from './pages/initiatives.js?v=2.1.1';
 import { renderGallery, initGalleryFilters } from './pages/gallery.js?v=2.1.1';
 import { renderContact, initContactForm } from './pages/contact.js?v=2.1.1';
-import { renderReports } from './pages/reports.js?v=2.1.1';
-import { renderNews, initNewsFilters } from './pages/news.js?v=2.1.1';
 import { renderVolunteer, initVolunteerForm } from './pages/volunteer.js?v=2.1.1';
-import { renderFaq, initFaqAccordion } from './pages/faq.js?v=2.1.1';
 import { renderPrivacy } from './pages/privacy.js?v=2.1.1';
 import { renderTerms } from './pages/terms.js?v=2.1.1';
 import { renderJoin, initJoinForm } from './pages/join.js?v=2.1.1';
@@ -37,10 +34,7 @@ const routes = {
     '/initiatives': renderInitiatives,
     '/gallery': renderGallery,
     '/contact': renderContact,
-    '/reports': renderReports,
-    '/news': renderNews,
     '/volunteer': renderVolunteer,
-    '/faq': renderFaq,
     '/privacy': renderPrivacy,
     '/terms': renderTerms,
     '/join': renderJoin,
@@ -55,9 +49,7 @@ const postRenderHooks = {
     '/initiatives': [initInitiativesPage],
     '/gallery': [initGalleryFilters],
     '/contact': [initContactForm],
-    '/news': [initNewsFilters],
     '/volunteer': [initVolunteerForm],
-    '/faq': [initFaqAccordion],
     '/join': [initJoinForm],
     '/farmer-award': [initFarmerAwardForm]
 };
